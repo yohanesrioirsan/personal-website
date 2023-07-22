@@ -6,7 +6,7 @@ function NavBar() {
     <Container>
       <Navbar expand="lg">
         <Container>
-          <Navbar.Brand href="#">Rioirsan.Dev™</Navbar.Brand>
+          <Navbar.Brand href="#">Rioirsan</Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="ms-auto">
