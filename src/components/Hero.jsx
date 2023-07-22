@@ -29,7 +29,7 @@ function Hero() {
                 opacity: "50%",
               }}
             >
-              passionate and dedicated junior developer with a thirst for
+              a passionate and dedicated junior developer with a thirst for
               innovation and a love for turning ideas into reality through code.{" "}
             </h5>
             <Button className="btn-contact mt-3">
