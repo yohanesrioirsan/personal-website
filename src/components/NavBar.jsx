@@ -1,5 +1,6 @@
 import React from "react";
 import { Container, NavLink, Navbar, Nav } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 function NavBar() {
   return (
@@ -12,7 +13,14 @@ function NavBar() {
             <Nav className="ms-auto">
               <NavLink href="#about">About</NavLink>
               <NavLink href="#skills">Skills</NavLink>
-              <NavLink href="#">Work</NavLink>
+              <NavLink>
+                <Link
+                  to="/work"
+                  style={{ textDecoration: "none", color: "white" }}
+                >
+                  Work
+                </Link>
+              </NavLink>
             </Nav>
           </Navbar.Collapse>
         </Container>

@@ -1,26 +1,26 @@
-import React from "react";
-import { Container } from "react-bootstrap";
-import NavBar from "./components/NavBar";
-import Hero from "./components/Hero";
-import AboutMe from "./components/AboutMe";
-import Skills from "./components/Skills";
-import Footer from "./components/Footer";
-import "./App.css";
-import "bootstrap/dist/css/bootstrap.min.css";
-import "bootstrap-icons/font/bootstrap-icons.css";
+import Home from "./pages/Home";
+import Work from "./pages/Work";
+import Resume from "./pages/Resume";
+
+import { RouterProvider, createBrowserRouter } from "react-router-dom";
 
 function App() {
-  return (
-    <section className="body">
-      <NavBar />
-      <Container>
-        <Hero className="hero-content" />
-        <AboutMe />
-        <Skills />
-        <Footer />
-      </Container>
-    </section>
-  );
+  const router = createBrowserRouter([
+    {
+      path: "/",
+      element: <Home />,
+    },
+    {
+      path: "/work",
+      element: <Work />,
+    },
+    {
+      path: "/resume",
+      element: <Resume />,
+    },
+  ]);
+
+  return <RouterProvider router={router} />;
 }
 
 export default App;
