@@ -1,11 +1,10 @@
 import React from "react";
 import { Container, Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import binarImg from "../../assets/work/binar-car-rental.png";
-import signUpPage from "../../assets/work/signup-page.png";
-import detailPage from "../../assets/work/detail-page.png";
+import adminCarList from "../../assets/work/admin-car-list.png";
+import deleteModal from "../../assets/work/delete modal.png";
 
-function BinarCarRental() {
+function BinarCarRentalAdmin() {
   return (
     <section className="work-detail" style={{ backgroundColor: "#fafafa" }}>
       <Container style={{ paddingTop: "1rem", paddingBottom: "3rem" }}>
@@ -37,9 +36,9 @@ function BinarCarRental() {
           </div>
           <h5 style={{ color: "#6692fe" }}>Binar Car Rental</h5>
           <p className="intro-sub-text">
-            A car rental website with interesting features. This project is the
-            final assignment I completed during my participation in the Binar
-            Academy bootcamp.
+            An admin website designed to manage the content of the Binar Car
+            Rental website. It includes features such as adding cars, modifying
+            prices, sales reporting, and more.
           </p>
         </div>
         <hr></hr>
@@ -53,7 +52,7 @@ function BinarCarRental() {
               <div>
                 <h6 style={{ color: "#6692fe" }}>Jobs</h6>
                 <h6 style={{ fontSize: "14px" }}>
-                  User Auth, Signup Page, Car Detail Page
+                  List Car UI & Function, Delete Modal
                 </h6>
               </div>
               <div>
@@ -68,7 +67,7 @@ function BinarCarRental() {
               <div className="d-flex flex-row" style={{ gap: "15px" }}>
                 <h6 style={{ fontSize: "14px" }}>HTML</h6>
                 <h6 style={{ fontSize: "14px" }}>CSS</h6>
-                <h6 style={{ fontSize: "14px" }}>NextJs</h6>
+                <h6 style={{ fontSize: "14px" }}>ReactJs</h6>
               </div>
             </div>
             <div>
@@ -79,7 +78,7 @@ function BinarCarRental() {
             </div>
             <div>
               {" "}
-              <Button className="btn-visit mt-3">
+              <Button className="btn-visit mt-3" disabled>
                 <Link
                   to="https://fer-10-platinum-kel1-public.vercel.app/"
                   style={{ textDecoration: "none", color: "white" }}
@@ -94,15 +93,15 @@ function BinarCarRental() {
 
         <div>
           <h5 style={{ color: "#6692fe" }}>Screenshots</h5>
-          <div className="image-container">
-            <img src={binarImg} alt="thumbnail" className="screenshot-image" />
+          <div className="d-flex justify-content-center">
             <img
-              src={signUpPage}
+              src={adminCarList}
               alt="thumbnail"
               className="screenshot-image"
+              style={{ marginRight: "15px" }}
             />
             <img
-              src={detailPage}
+              src={deleteModal}
               alt="thumbnail"
               className="screenshot-image"
             />
@@ -113,4 +112,4 @@ function BinarCarRental() {
   );
 }
 
-export default BinarCarRental;
+export default BinarCarRentalAdmin;

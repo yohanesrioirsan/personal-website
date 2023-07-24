@@ -6,7 +6,7 @@ import binarAdminImg from "../assets/work/binar-car-rental-admin.png";
 
 function Work() {
   return (
-    <div style={{ backgroundColor: "#fafafa" }}>
+    <div style={{ backgroundColor: "#fafafa", height: "100vh" }}>
       <Container style={{ paddingTop: "1rem" }}>
         <section className="backnavs">
           <Link to="/" style={{ textDecoration: "none", color: "black" }}>
@@ -46,7 +46,14 @@ function Work() {
                 Binar Academy bootcamp.
               </Card.Text>
               <div className="d-flex justify-content-center align-items-center pb-2">
-                <Button className="btn-viewdetails">View Details</Button>
+                <Button className="btn-viewdetails">
+                  <Link
+                    to="/work/binar"
+                    style={{ textDecoration: "none", color: "white" }}
+                  >
+                    View Details
+                  </Link>
+                </Button>
               </div>
             </Card.Body>
           </Card>
@@ -62,7 +69,14 @@ function Work() {
                 modifying prices, sales reporting, and more.
               </Card.Text>
               <div className="d-flex justify-content-center align-items-center pb-2">
-                <Button className="btn-viewdetails">View Details</Button>
+                <Button className="btn-viewdetails">
+                  <Link
+                    to="/work/binar-admin"
+                    style={{ textDecoration: "none", color: "white" }}
+                  >
+                    View Details
+                  </Link>
+                </Button>
               </div>
             </Card.Body>
           </Card>
