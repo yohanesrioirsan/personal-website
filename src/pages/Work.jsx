@@ -6,7 +6,7 @@ import binarAdminImg from "../assets/work/binar-car-rental-admin.png";
 
 function Work() {
   return (
-    <div style={{ backgroundColor: "#fafafa" }}>
+    <div style={{ backgroundColor: "#fafafa", height: "100vh" }}>
       <Container style={{ paddingTop: "1rem" }}>
         <section className="backnavs">
           <Link to="/" style={{ textDecoration: "none", color: "black" }}>
