@@ -1,6 +1,7 @@
 import React from "react";
-import { Container } from "react-bootstrap";
+import { Container, Button } from "react-bootstrap";
 import RevealOnScroll from "./RevealOnScroll";
+import { Link } from "react-router-dom";
 import "./AboutMe.css";
 
 function AboutMe() {
@@ -24,6 +25,18 @@ function AboutMe() {
             Welcome to my digital corner of the world, where I'm thrilled to
             share my coding journey with you.
           </p>
+          <Button className="btn-contact mt-1">
+            <Link
+              to="/resume"
+              style={{ textDecoration: "none", color: "white" }}
+            >
+              View My Resume
+              <i
+                className="bi bi-file-person-fill"
+                style={{ marginLeft: "5px" }}
+              ></i>
+            </Link>
+          </Button>
         </section>
       </RevealOnScroll>
     </Container>
