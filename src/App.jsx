@@ -1,6 +1,8 @@
 import Home from "./pages/Home";
 import Work from "./pages/Work";
 import Resume from "./pages/Resume";
+import BinarCarRental from "./pages/work/BinarCarRental";
+import BinarCarRentalAdmin from "./pages/work/BinarCarRentalAdmin";
 
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 
@@ -17,6 +19,14 @@ function App() {
     {
       path: "/resume",
       element: <Resume />,
+    },
+    {
+      path: "/work/binar",
+      element: <BinarCarRental />,
+    },
+    {
+      path: "/work/binar-admin",
+      element: <BinarCarRentalAdmin />,
     },
   ]);
 
