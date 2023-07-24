@@ -4,14 +4,17 @@ import { Link } from "react-router-dom";
 
 function Resume() {
   return (
-    <div style={{ backgroundColor: "#fafafa", height: "100vh" }}>
-      <Container style={{ paddingTop: "5rem" }}>
+    <div
+      className="work-root"
+      style={{ backgroundColor: "#fafafa", height: "100vh" }}
+    >
+      <Container style={{ paddingTop: "1rem" }}>
         <section className="backnavs">
           <Link to="/" style={{ textDecoration: "none", color: "black" }}>
             <h1
               style={{
                 fontWeight: "300",
-                fontSize: "28px",
+                fontSize: "14px",
               }}
             >
               Home
@@ -22,7 +25,7 @@ function Resume() {
           <div>
             <h1>Resume</h1>
           </div>
-          <div className="profile pt-5">
+          <div className="profile pt-3">
             <h5 style={{ color: "#6692fe" }}>Profile</h5>
             <p style={{ width: "50%" }}>
               Enthusiastic Junior Web Developer seeking new opportunities to
