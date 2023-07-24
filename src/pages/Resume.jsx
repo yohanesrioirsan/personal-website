@@ -57,7 +57,7 @@ function Resume() {
                     <h6>Universitas Dipa Makassar</h6>
                     <h6 style={{ opacity: "50%" }}>2018 - 2022</h6>
                     <h6 style={{ fontWeight: "400" }}>
-                      Bachelor of Information and Technology
+                      Bachelor of Informatics Engineering
                     </h6>
                   </div>
                   <h5 className="pt-2" style={{ color: "#6692fe" }}>
