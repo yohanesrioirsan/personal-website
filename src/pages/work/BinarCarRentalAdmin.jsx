@@ -6,10 +6,7 @@ import deleteModal from "../../assets/work/delete modal.png";
 
 function BinarCarRentalAdmin() {
   return (
-    <section
-      className="work-detail"
-      style={{ backgroundColor: "#fafafa", height: "100vh" }}
-    >
+    <section className="work-detail" style={{ backgroundColor: "#fafafa" }}>
       <Container style={{ paddingTop: "1rem", paddingBottom: "3rem" }}>
         <section className="backnavs d-flex justify-content-between">
           <Link to="/work" style={{ textDecoration: "none", color: "black" }}>

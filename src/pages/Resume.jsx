@@ -4,10 +4,7 @@ import { Link } from "react-router-dom";
 
 function Resume() {
   return (
-    <div
-      className="work-root"
-      style={{ backgroundColor: "#fafafa", height: "100vh" }}
-    >
+    <div className="work-root" style={{ backgroundColor: "#fafafa" }}>
       <Container style={{ paddingTop: "1rem" }}>
         <section className="backnavs">
           <Link to="/" style={{ textDecoration: "none", color: "black" }}>

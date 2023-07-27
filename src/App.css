@@ -138,6 +138,14 @@ p {
   margin-top: 5px;
 }
 
+.work-root,
+.work-detail {
+  height: 100vh;
+}
+
+.work-page {
+  height: 100vh;
+}
 @media (max-width: 575.98px) {
   .copyright {
     padding-top: 2rem;
@@ -153,6 +161,15 @@ p {
 
   .intro-sub-text {
     width: 100%;
+  }
+
+  .work-root,
+  .work-detail {
+    height: 130vh;
+  }
+
+  .work-page {
+    height: 150vh;
   }
 
   .work {
