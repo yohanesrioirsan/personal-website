@@ -3,6 +3,7 @@ import { Container, Card, Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import binarImg from "../assets/work/binar-car-rental.png";
 import binarAdminImg from "../assets/work/binar-car-rental-admin.png";
+import anigeneratorImg from "../assets/work/anigenerator-thumbnail.png";
 
 function Work() {
   return (
@@ -72,6 +73,29 @@ function Work() {
                 <Button className="btn-viewdetails">
                   <Link
                     to="/work/binar-admin"
+                    style={{ textDecoration: "none", color: "white" }}
+                  >
+                    View Details
+                  </Link>
+                </Button>
+              </div>
+            </Card.Body>
+          </Card>
+          <Card>
+            <Card.Body>
+              <Card.Img variant="top" src={anigeneratorImg} />
+              <Card.Title className="pt-3" style={{ color: "#6692fe" }}>
+                Anime Generator
+              </Card.Title>
+              <Card.Text>
+                A simple website that contains list and quotes from anime. This
+                is my first solo project aimed at learning more about APIs. Find
+                your favorite anime quotes here.
+              </Card.Text>
+              <div className="d-flex justify-content-center align-items-center pb-2">
+                <Button className="btn-viewdetails">
+                  <Link
+                    to="/work/anigenerator"
                     style={{ textDecoration: "none", color: "white" }}
                   >
                     View Details
