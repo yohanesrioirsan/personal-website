@@ -1,7 +1,7 @@
 import React from "react";
 import { Container, Button } from "react-bootstrap";
 import RevealOnScroll from "./RevealOnScroll";
-import { Link } from "react-router-dom";
+import ResumeFile from "../assets/files/Resume - Yohanes Rio Irsan (2023).pdf";
 import "./AboutMe.css";
 
 function AboutMe() {
@@ -26,16 +26,18 @@ function AboutMe() {
             share my coding journey with you.
           </p>
           <Button className="btn-contact mt-1">
-            <Link
-              to="/resume"
+            <a
+              href={ResumeFile}
               style={{ textDecoration: "none", color: "white" }}
+              target="_blank"
+              rel="noreferrer"
             >
               View My Resume
               <i
                 className="bi bi-file-person-fill"
                 style={{ marginLeft: "5px" }}
               ></i>
-            </Link>
+            </a>
           </Button>
         </section>
       </RevealOnScroll>
