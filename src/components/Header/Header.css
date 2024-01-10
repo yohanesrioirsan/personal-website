@@ -1,0 +1,132 @@
+.header {
+  height: 100vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.___btn {
+  display: flex;
+  gap: 12px;
+}
+
+.___cv-btn {
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+  height: 30px;
+  background-color: #e6ff00;
+  box-shadow: -6px 7px 0px -4px rgba(45, 41, 41, 1);
+  -webkit-box-shadow: -6px 7px 0px -4px rgba(45, 41, 41, 1);
+  -moz-box-shadow: -6px 7px 0px -4px rgba(45, 41, 41, 1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.___cv-btn:hover {
+  transform: scale(1.05);
+}
+
+.___mail-btn:hover {
+  transform: scale(1.05);
+}
+
+.___mail-btn {
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 120px;
+  height: 30px;
+  background-color: #e6ff00;
+  box-shadow: -6px 7px 0px -4px rgba(45, 41, 41, 1);
+  -webkit-box-shadow: -6px 7px 0px -4px rgba(45, 41, 41, 1);
+  -moz-box-shadow: -6px 7px 0px -4px rgba(45, 41, 41, 1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.btn-icon {
+  margin-right: 8px;
+  width: 16px;
+  height: 16px;
+}
+
+.my-picture {
+  width: 600px;
+  height: 600px;
+}
+
+.my_job > h1 {
+  font-size: 62px;
+}
+
+.my_name > h1 {
+  font-size: 24px;
+}
+
+.intro > p {
+  font-size: 22px;
+  width: 75%;
+}
+
+/* MOBILE VIEW */
+
+@media (max-width: 767px) {
+  .header {
+    height: 85vh;
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+
+  .my_name {
+    display: flex;
+    justify-content: center;
+  }
+
+  .my_job {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .intro {
+    text-align: center;
+  }
+
+  .___btn {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 3rem;
+  }
+
+  .header-picture {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 500px;
+    height: 500px;
+    order: -1;
+    margin-bottom: -5rem;
+    margin-top: -6rem;
+  }
+
+  .my_job > h1 {
+    font-size: 32px;
+  }
+
+  .my_name > h1 {
+    font-size: 18px;
+  }
+
+  .my-picture {
+    width: 300px;
+    height: 300px;
+  }
+
+  .intro > p {
+    font-size: 18px;
+    width: 100%;
+  }
+}
