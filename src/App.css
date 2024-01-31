@@ -138,11 +138,6 @@ p {
   margin-top: 5px;
 }
 
-.work-root,
-.work-detail {
-  height: 100vh;
-}
-
 .work-page {
   height: 100vh;
 }
@@ -161,11 +156,6 @@ p {
 
   .intro-sub-text {
     width: 100%;
-  }
-
-  .work-root,
-  .work-detail {
-    height: 130vh;
   }
 
   .work-page {
