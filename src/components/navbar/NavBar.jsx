@@ -5,9 +5,9 @@ function NavBar() {
 
   return (
     <>
-      <nav className="sticky top-0 py-4 animate-slide-in-top">
+      <nav className="sticky top-0 py-4 animate-slide-in-top z-50">
         <div className="flex justify-center">
-          <div className="border-2 border-[#DBDBDB] py-15 px-20 w-[500px] h-[79px] flex justify-between items-center rounded-full drop-shadow-md backdrop-blur-sm bg-white/80">
+          <div className="border-2 border-[#DBDBDB] py-6 px-4 lg:py-15 lg:px-4 lg:w-[500px] h-[79px] flex justify-between items-center rounded-full drop-shadow-md backdrop-blur-sm bg-white/80">
             <div className="hover:bg-[#B6D168] py-[10px] px-[25px] rounded-full hover:animate-pulse-fade-in">
               <a
                 href="#"
