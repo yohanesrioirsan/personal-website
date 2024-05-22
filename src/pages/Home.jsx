@@ -1,14 +1,22 @@
 import React from "react";
-
+import { Container } from "react-bootstrap";
 
 function Home() {
   return (
-    <>
-      <div className="oops" style={{width: "100vw", height:"100vh", display: "flex", justifyContent: "center", alignItems: "center", flexDirection: "column"}}>
-        <h1 style={{fontSize:"10em"}}>Oops...</h1>
-        <h1 style={{marginTop: "-1rem", opacity: "70%"}}>I am developing a new visual for this website🥲. Come back later.</h1>
+    <Container>
+      <div className="p-5">
+        <h1 className="fw-bold" style={{ color: "#313131" }}>
+          Come back later..
+        </h1>
+        <h5>
+          Hi, there. I'm currently developing my new website
+          <br /> with improved interface and also i'm implementing new
+          tech-stack so... <br />
+          Please come back later. Thank you. 👋
+        </h5>
+        <h7 className="w-100 d-flex align-items-end">- Yohanes Rio Irsan</h7>
       </div>
-    </>
+    </Container>
   );
 }
 
