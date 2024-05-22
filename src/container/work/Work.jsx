@@ -1,6 +1,5 @@
-// import Card from "../../components/card/Card";
-
 import Card from "../../components/card/Card";
+import WorkList from "../../json/WorkList.json";
 
 function Work() {
   return (
@@ -21,13 +20,11 @@ function Work() {
       </div>
       <div className="w-full lg:w-[638px] bg-[#CECECE] p-4 rounded-t-lg rounded-b-md lg:rounded-t-2xl lg:rounded-b-lg drop-shadow-xl">
         <div className="w-full grid grid-cols-2 gap-3">
-          <Card />
-          <Card />
+          {WorkList.map((work, i) => (
+            <Card key={i} image={work.image} title={work.title} />
+          ))}
         </div>
-        <div className="w-full grid grid-cols-2 gap-3 mt-3">
-          <Card />
-          <Card />
-        </div>
+        <div className="w-full grid grid-cols-2 gap-3 mt-3"></div>
       </div>
     </section>
   );
