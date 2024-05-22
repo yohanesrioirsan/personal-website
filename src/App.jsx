@@ -1,18 +1,15 @@
 import NavBar from "./components/navbar/NavBar";
+import Home from "./container/home/Home";
 
 function App() {
   return (
     <>
-      <div className="container">
-        <NavBar />
+      <div className="container px-4">
+        <nav className="sticky top-0 py-4 animate-slide-in-top z-50">
+          <NavBar />
+        </nav>
         <main>
-          <section
-            id="blogs"
-            className="flex justify-center"
-            style={{ height: "200vh" }}
-          >
-            <h1 className="text-4xl">TIDAK HELLO WORLD</h1>
-          </section>
+          <Home />
         </main>
       </div>
     </>

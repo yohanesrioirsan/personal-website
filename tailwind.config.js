@@ -16,12 +16,6 @@ export default {
             "2xl": "6rem",
           },
         },
-        screens: {
-          sm: "100%",
-          md: "100%",
-          lg: "1024px",
-          xl: "1280px",
-        },
       },
       keyframes: {
         wave: {
@@ -37,6 +31,9 @@ export default {
       },
       animation: {
         wave: "wave 1.5s infinite",
+      },
+      lineHeight: {
+        "extra-loose": "60px",
       },
     },
   },
