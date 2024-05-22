@@ -1,22 +1,23 @@
 import animations from "@midudev/tailwind-animations";
+import daisyui from "daisyui";
 
 /** @type {import('tailwindcss').Config} */
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
-    extend: {
-      container: {
-        center: true,
+    container: {
+      center: true,
+      padding: {
         padding: {
-          padding: {
-            DEFAULT: "1rem",
-            sm: "2rem",
-            lg: "4rem",
-            xl: "5rem",
-            "2xl": "6rem",
-          },
+          DEFAULT: "1rem",
+          sm: "2rem",
+          lg: "4rem",
+          xl: "5rem",
+          "2xl": "6rem",
         },
       },
+    },
+    extend: {
       keyframes: {
         wave: {
           "0%": { transform: "rotate(0.0deg)" },
@@ -37,5 +38,5 @@ export default {
       },
     },
   },
-  plugins: [animations],
+  plugins: [animations, daisyui],
 };

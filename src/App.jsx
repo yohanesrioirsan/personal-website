@@ -1,5 +1,6 @@
 import NavBar from "./components/navbar/NavBar";
 import Home from "./container/home/Home";
+import Work from "./container/work/Work";
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
         </nav>
         <main>
           <Home />
+          <Work />
         </main>
       </div>
     </>
