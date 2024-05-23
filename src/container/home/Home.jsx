@@ -5,8 +5,9 @@ function Home() {
     <section className="w-full h-[70vh] flex justify-center items-center">
       <div className="relative bg-white lg:w-[638px] md:w-[638px] sm:w-auto drop-shadow-xl rounded-3xl py-4 px-8 animate-slide-up-fade">
         <p className="leading-tight lg:leading-extra-loose text-3xl lg:text-5xl text-[#313131] font-semibold">
-          Hi 👋, there. <br />I am <span className="text-[#D5B02A]"> Rio</span>,
-          a<span className="text-[#D5B02A]"> front-end developer </span>
+          Hi <span className="animate-wave">👋</span>, there. <br />I am
+          <span className="text-[#D5B02A]"> Rio</span>, a
+          <span className="text-[#D5B02A]"> front-end developer </span>
           from Indonesia.
         </p>
         <img
