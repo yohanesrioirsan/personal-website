@@ -1,6 +1,7 @@
 import NavBar from "./components/navbar/NavBar";
 import Home from "./container/home/Home";
 import Work from "./container/work/Work";
+import Footer from "./components/footer/Footer";
 
 function App() {
   return (
@@ -13,6 +14,9 @@ function App() {
           <Home />
           <Work />
         </main>
+        <footer className="sticky bottom-0 z-50">
+          <Footer />
+        </footer>
       </div>
     </>
   );
