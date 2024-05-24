@@ -33,7 +33,7 @@ function About() {
             <div className="w-full lg:w-[638px] bg-[#FFFFFF] p-6 rounded-b-lg rounded-t-md lg:rounded-b-2xl lg:rounded-t-lg drop-shadow-xl">
               <h1 className="text-[#343434] text-xl lg:text-2xl font-semibold">
                 {
-                  "I like tinkering things and turning my ideas into reality. Here are a few projects that I’ve made, both for fun and for my clients."
+                  "My name is Yohanes Rio Irsan. I am a web developer who familiar with front end technologies with a passion for clean, user-friendly design."
                 }
               </h1>
             </div>
