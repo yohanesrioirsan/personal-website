@@ -8,12 +8,12 @@ function NavBar() {
           <div className="flex justify-center">
             <div className="border-2 border-[#DBDBDB] py-6 px-4 lg:py-15 lg:px-4 w-full lg:w-[500px] h-[79px] flex justify-between items-center rounded-full drop-shadow-md backdrop-blur-sm bg-white/80">
               <div className="hover:animate-pulse-fade-in">
-                <a
-                  href="#work"
+                <Link
+                  to="/work"
                   className="text-xl lg:text-2xl text-[#A7A7A7] hover:bg-[#B6D168] py-[10px] px-[25px] rounded-full hover:text-[#4F601F]"
                 >
                   Work
-                </a>
+                </Link>
               </div>
               <div className="bg-[#B3C8D1] py-[10px] px-[25px] rounded-full">
                 <button type="button">

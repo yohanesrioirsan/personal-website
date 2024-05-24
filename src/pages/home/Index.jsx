@@ -1,12 +1,12 @@
 import Home from "../../container/home/Home";
-import Work from "../../container/work/Work";
+import About from "../../container/about/About";
 
 function Index() {
   return (
     <>
       <main>
         <Home />
-        <Work />
+        <About />
       </main>
     </>
   );
