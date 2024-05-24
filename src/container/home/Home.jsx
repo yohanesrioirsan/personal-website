@@ -2,7 +2,7 @@ import emoji from "../../assets/img/Emoji.png";
 
 function Home() {
   return (
-    <section className="container px-4">
+    <section id="work" className="container px-4">
       <div className="w-full h-[70vh] flex justify-center items-center">
         <div className="relative bg-white lg:w-[638px] md:w-[638px] sm:w-auto drop-shadow-xl rounded-3xl py-4 px-8 animate-slide-up-fade">
           <p className="leading-tight lg:leading-extra-loose text-3xl lg:text-5xl text-[#313131] font-semibold">

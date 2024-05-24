@@ -13,8 +13,10 @@ function Footer() {
               <div className="bg-[#DDBF53] border-2 border-[#C7AC4B] rounded-full flex justify-center items-center  drop-shadow-lg w-12 h-12">
                 <h1 className="text-2xl">📄</h1>
               </div>
-              <div className="bg-[#B6D168] border-2 border-[#A4BD5E] rounded-full flex justify-center items-center w-12 h-12">
-                <h1 className="text-2xl">📧</h1>
+              <div className="animate-wave bg-[#B6D168] border-2 border-[#A4BD5E] rounded-full flex justify-center items-center w-12 h-12">
+                <a href="mailto:rioirsan8@gmail.com">
+                  <h1 className="text-2xl">💌</h1>
+                </a>
               </div>
             </div>
           </div>
