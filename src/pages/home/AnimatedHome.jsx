@@ -2,6 +2,7 @@ import Index from "./Index";
 import { Route, Routes, useLocation } from "react-router-dom";
 import Blog from "../blog/Blog";
 import Work from "../work/Work";
+import Article from "../blog/Article";
 
 import { AnimatePresence } from "framer-motion";
 
@@ -13,6 +14,7 @@ function AnimatedHome() {
         <Route path="/" element={<Index />} />
         <Route path="/writing" element={<Blog />} />
         <Route path="/work" element={<Work />} />
+        <Route path="/writing/:id" element={<Article />} />
       </Routes>
     </AnimatePresence>
   );

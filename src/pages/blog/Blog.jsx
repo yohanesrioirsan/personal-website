@@ -1,4 +1,6 @@
 import { motion } from "framer-motion";
+import BlogThumbnail from "../../components/card/BlogThumbnail";
+import Aritcles from "../../json/DummyArticle.json";
 
 function Blog() {
   return (
@@ -8,7 +10,7 @@ function Blog() {
       animate={{ width: "100%" }}
       exit={{ x: window.innerWidth, transition: { duration: 0.2 } }}
     >
-      <div className="animate-squeeze w-full flex justify-center items-center">
+      <div className="animate-squeeze w-full flex flex-col justify-center items-center">
         <div className="flex justify-center items-center flex-col gap-3">
           <div className="flex flex-col gap-1">
             <div className="w-full lg:w-[638px] bg-[#DDBF53] p-6 rounded-t-lg rounded-b-md lg:rounded-t-2xl lg:rounded-b-lg drop-shadow-xl">
@@ -24,6 +26,20 @@ function Blog() {
               </h1>
             </div>
           </div>
+        </div>
+        <div className="w-full lg:w-[638px] bg-[#CECECE] p-4 rounded-t-lg rounded-b-md lg:rounded-t-2xl lg:rounded-b-lg drop-shadow-xl mt-4">
+          <div className="w-full grid grid-cols-2 gap-3">
+            {Aritcles.map((article, i) => (
+              <BlogThumbnail
+                key={i}
+                title={article.title}
+                id={article.id}
+                date={article.date}
+                content={article.content}
+              />
+            ))}
+          </div>
+          <div className="w-full grid grid-cols-2 gap-3 mt-3"></div>
         </div>
       </div>
     </motion.section>
