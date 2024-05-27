@@ -12,7 +12,9 @@ function Footer() {
               </div>
               <div className="flex gap-3 items-center">
                 <div className="bg-[#DDBF53] border-2 border-[#C7AC4B] rounded-full flex justify-center items-center drop-shadow-lg w-12 h-12">
-                  <h1 className="hover:animate-bounce text-2xl">📄</h1>
+                  <a href="https://read.cv/yohanesrioirsan" target="_blank">
+                    <h1 className="hover:animate-bounce text-2xl">📄</h1>
+                  </a>
                 </div>
                 <div className="bg-[#B6D168] border-2 border-[#A4BD5E] rounded-full flex justify-center items-center w-12 h-12">
                   <a

@@ -3,6 +3,8 @@ import BlogThumbnail from "../../components/card/BlogThumbnail";
 import Aritcles from "../../json/DummyArticle.json";
 
 function Blog() {
+  const CountArticles = Aritcles.length % 2 !== 0;
+
   return (
     <motion.section
       className="h-screen container px-4"
@@ -38,6 +40,13 @@ function Blog() {
                 content={article.content}
               />
             ))}
+            {CountArticles && (
+              <div className="flex items-center justify-center p-6">
+                <h2 className="text-[#A3A3A3] text-xl lg:text-2xl font-semibold text-center">
+                  {"No More Post:("}
+                </h2>
+              </div>
+            )}
           </div>
           <div className="w-full grid grid-cols-2 gap-3 mt-3"></div>
         </div>

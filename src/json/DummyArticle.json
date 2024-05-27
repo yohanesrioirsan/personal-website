@@ -2,12 +2,7 @@
   {
     "id": 1,
     "title": "Hello World",
-    "date": "17 August 1945",
-    "content": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
-  },
-  {
-    "id": 2,
-    "title": "Hello World",
-    "content": "Hello World, I am LIVE!!"
+    "date": "27 May 2024",
+    "content": "Hello World. This is my first post on this website. It is said to be a blog, but actually, it is not like a blog that has long articles. On this page, it is more like my ramblings (similar to on Twitter). So, I hope you can enjoy it."
   }
 ]

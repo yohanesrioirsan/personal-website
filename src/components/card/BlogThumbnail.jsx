@@ -22,7 +22,7 @@ function BlogThumbnail(props) {
     <div className="card bg-white shadow-xl">
       <div className="card-body flex">
         <Link to={`/writing/${id}`}>
-          <h2 className="card-title text-[#343434] text-xl lg:text-2xl font-semibold">
+          <h2 className="card-title text-[#343434] text-xl lg:text-2xl font-semibold hover:text-[#DDBF53]">
             {props.title}
           </h2>
         </Link>
