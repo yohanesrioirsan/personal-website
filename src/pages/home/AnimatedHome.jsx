@@ -14,7 +14,7 @@ function AnimatedHome() {
         <Route path="/" element={<Index />} />
         <Route path="/writing" element={<Blog />} />
         <Route path="/work" element={<Work />} />
-        <Route path="/writing/:id" element={<Article />} />
+        <Route path="/writing/:slug" element={<Article />} />
       </Routes>
     </AnimatePresence>
   );

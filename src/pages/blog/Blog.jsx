@@ -7,7 +7,7 @@ function Blog() {
 
   return (
     <motion.section
-      className="h-screen container px-4"
+      className="h-full container px-4"
       initial={{ width: 0 }}
       animate={{ width: "100%" }}
       exit={{ x: window.innerWidth, transition: { duration: 0.2 } }}
@@ -35,7 +35,7 @@ function Blog() {
               <BlogThumbnail
                 key={i}
                 title={article.title}
-                id={article.id}
+                slug={article.slug}
                 date={article.date}
                 content={article.content}
               />

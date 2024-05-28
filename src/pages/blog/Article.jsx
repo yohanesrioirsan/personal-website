@@ -4,9 +4,8 @@ import myWritings from "../../json/DummyArticle.json";
 import emoji from "../../assets/img/Emoji.png";
 
 function Article() {
-  const { id } = useParams();
-  const articleId = parseInt(id, 10);
-  const article = myWritings.find((article) => article.id === articleId);
+  const { slug } = useParams();
+  const article = myWritings.find((article) => article.slug === slug);
 
   useEffect(() => {
     if (article) {
