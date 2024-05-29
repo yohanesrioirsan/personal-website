@@ -31,7 +31,13 @@ function Work() {
         <div className="w-full lg:w-[638px] bg-[#CECECE] p-4 rounded-t-lg rounded-b-md lg:rounded-t-2xl lg:rounded-b-lg drop-shadow-xl mt-4">
           <div className="w-full grid grid-cols-2 gap-3">
             {WorkList.map((work, i) => (
-              <Card key={i} image={work.image} title={work.title} />
+              <Card
+                key={i}
+                image={work.image}
+                title={work.title}
+                repository={work.repository}
+                url={work.url}
+              />
             ))}
             {CountWorkList && (
               <div className="flex items-center justify-center p-6">

@@ -22,5 +22,10 @@
     "url": "https://cskinsdb.vercel.app/",
     "repository": "https://github.com/yohanesrioirsan/cskinsdb",
     "image": "https://raw.githubusercontent.com/yohanesrioirsan/personal-website/yri/v3/src/assets/thumbnails/cskins.png"
+  },
+  {
+    "title": "Dih? Discord Bot",
+    "repository": "https://github.com/yohanesrioirsan/FerryWAKWAK",
+    "image": "https://raw.githubusercontent.com/yohanesrioirsan/personal-website/5e4dfba9bc7cc0eea08f71643b691bc75dea5828/src/assets/thumbnails/dihbot.png"
   }
 ]
