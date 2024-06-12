@@ -12,6 +12,12 @@
     "image": "https://raw.githubusercontent.com/yohanesrioirsan/personal-website/yri/v3/src/assets/thumbnails/10manfun.png"
   },
   {
+    "title": "AniGen",
+    "url": "https://anigenerator.vercel.app/anilist",
+    "repository": "https://github.com/yohanesrioirsan/anigenerator",
+    "image": "https://raw.githubusercontent.com/yohanesrioirsan/personal-website/master/src/assets/thumbnails/anigenerator.png"
+  },
+  {
     "title": "Pay 2 Win",
     "url": "https://pay2win-fe.vercel.app/",
     "repository": "https://github.com/yohanesrioirsan/pay2win",
