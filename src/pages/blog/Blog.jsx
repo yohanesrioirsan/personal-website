@@ -7,7 +7,7 @@ function Blog() {
 
   return (
     <motion.section
-      className="h-full container px-4"
+      className="min-h-screen container px-4"
       initial={{ width: 0 }}
       animate={{ width: "100%" }}
       exit={{ x: window.innerWidth, transition: { duration: 0.2 } }}

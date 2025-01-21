@@ -18,7 +18,7 @@ function Article() {
   }
 
   return (
-    <article className="h-screen container pt-4 px-4 lg:px-52">
+    <article className="min-h-screen container pt-4 px-4 lg:px-52">
       <div className="flex flex-col justify-center">
         <div className="mb-5">
           <h1 className="text-[#343434] text-4xl lg:text-6xl font-bold mb-1">
