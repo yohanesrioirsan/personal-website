@@ -1,4 +1,6 @@
 function Footer() {
+  const year = new Date().getFullYear();
+
   return (
     <>
       <footer className="sticky bottom-0 z-50">
@@ -7,7 +9,7 @@ function Footer() {
             <div className="w-full pb-4 lg:w-[500px] flex justify-between">
               <div className="bg-white border-2 border-[#DBDBDB] py-3 lg:py-4 px-3 rounded-full drop-shadow-xl">
                 <h1 className="text-[#757575] font-semibold">
-                  Yohanes Rio Irsan • 2024
+                  Yohanes Rio Irsan • {year}
                 </h1>
               </div>
               <div className="flex gap-3 items-center">
