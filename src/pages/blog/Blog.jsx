@@ -1,9 +1,14 @@
 import { motion } from "framer-motion";
 import BlogThumbnail from "../../components/card/BlogThumbnail";
 import Aritcles from "../../json/DummyArticle.json";
+import { useEffect } from "react";
 
 function Blog() {
   const CountArticles = Aritcles.length % 2 !== 0;
+
+  useEffect(() => {
+    document.title = "Blogs - Yohanes Rio Irsan";
+  });
 
   return (
     <motion.section

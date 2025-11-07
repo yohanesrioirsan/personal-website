@@ -1,5 +1,20 @@
 [
   {
+    "title": "Prompt Helper",
+    "repository": "https://github.com/yohanesrioirsan/prompt-helper",
+    "image": "https://raw.githubusercontent.com/yohanesrioirsan/personal-website/76b7c3d38742a1143969b1d1f929c41adfa36dd8/src/assets/thumbnails/prompt-helper.png"
+  },
+  {
+    "title": "Pandora Corp",
+    "url": "https://pandoracorp.id/",
+    "image": "https://raw.githubusercontent.com/yohanesrioirsan/personal-website/76b7c3d38742a1143969b1d1f929c41adfa36dd8/src/assets/thumbnails/pandora-corp.png"
+  },
+  {
+    "title": "Pandora Cybercafe",
+    "url": "https://cybercafe.pandoracorp.id/",
+    "image": "https://raw.githubusercontent.com/yohanesrioirsan/personal-website/76b7c3d38742a1143969b1d1f929c41adfa36dd8/src/assets/thumbnails/pandora-cybercafe.png"
+  },
+  {
     "title": "Binar Car Rental",
     "url": "https://fer-10-platinum-kel1-public.vercel.app/",
     "repository": "https://github.com/yohanesrioirsan/fer-10-platinum-kel1-public",
@@ -10,28 +25,5 @@
     "url": "https://10manfun.vercel.app/",
     "repository": "https://github.com/yohanesrioirsan/10man",
     "image": "https://raw.githubusercontent.com/yohanesrioirsan/personal-website/yri/v3/src/assets/thumbnails/10manfun.png"
-  },
-  {
-    "title": "AniGen",
-    "url": "https://anigenerator.vercel.app/anilist",
-    "repository": "https://github.com/yohanesrioirsan/anigenerator",
-    "image": "https://raw.githubusercontent.com/yohanesrioirsan/personal-website/master/src/assets/thumbnails/anigenerator.png"
-  },
-  {
-    "title": "Pay 2 Win",
-    "url": "https://pay2win-fe.vercel.app/",
-    "repository": "https://github.com/yohanesrioirsan/pay2win",
-    "image": "https://raw.githubusercontent.com/yohanesrioirsan/personal-website/yri/v3/src/assets/thumbnails/paytowin.png"
-  },
-  {
-    "title": "CS Skins DB",
-    "url": "https://cskinsdb.vercel.app/",
-    "repository": "https://github.com/yohanesrioirsan/cskinsdb",
-    "image": "https://raw.githubusercontent.com/yohanesrioirsan/personal-website/yri/v3/src/assets/thumbnails/cskins.png"
-  },
-  {
-    "title": "Dih? Discord Bot",
-    "repository": "https://github.com/yohanesrioirsan/FerryWAKWAK",
-    "image": "https://raw.githubusercontent.com/yohanesrioirsan/personal-website/5e4dfba9bc7cc0eea08f71643b691bc75dea5828/src/assets/thumbnails/dihbot.png"
   }
 ]

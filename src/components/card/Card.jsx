@@ -16,10 +16,12 @@ function Card(props) {
         </div>
         <div className="absolute top-0 left-0 flex justify-center items-center backdrop-blur-sm bg-white/80 w-full h-full rounded-2xl opacity-0 hover:animate-blink hover:opacity-100">
           <div className="flex gap-3 flex-col sm:flex-row">
-            <a className="btn btn-sm" href={props.repository} target="_blank">
-              <ion-icon name="logo-github"></ion-icon>
-              Git Repository
-            </a>
+            {props.repository && (
+              <a className="btn btn-sm" href={props.repository} target="_blank">
+                <ion-icon name="logo-github"></ion-icon>
+                Git Repository
+              </a>
+            )}
             {props.url && (
               <a className="btn btn-sm btn-accent" href={props.url}>
                 <ion-icon name="open-outline"></ion-icon>Visit Site

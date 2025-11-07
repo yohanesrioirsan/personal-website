@@ -1,9 +1,14 @@
 import { motion } from "framer-motion";
 import Card from "../../components/card/Card";
 import WorkList from "../../json/WorkList.json";
+import { useEffect } from "react";
 
 function Work() {
   const CountWorkList = WorkList.length % 2 !== 0;
+
+  useEffect(() => {
+    document.title = "Work - Yohanes Rio Irsan";
+  });
   return (
     <motion.section
       className="min-h-screen container px-4"
