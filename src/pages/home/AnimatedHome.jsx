@@ -5,14 +5,9 @@ import Work from "../work/Work";
 import Article from "../blog/Article";
 
 import { AnimatePresence } from "framer-motion";
-import { useEffect } from "react";
 
 function AnimatedHome() {
   const location = useLocation();
-
-  useEffect(() => {
-    document.title = "Yohanes Rio Irsan - Front-End Developer";
-  });
 
   return (
     <AnimatePresence>
