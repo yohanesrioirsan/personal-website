@@ -1,10 +1,10 @@
 import { motion } from "framer-motion";
 import BlogThumbnail from "../../components/card/BlogThumbnail";
-import Aritcles from "../../json/DummyArticle.json";
 import { useEffect } from "react";
+import { posts } from "../../blog/posts";
 
 function Blog() {
-  const CountArticles = Aritcles.length % 2 !== 0;
+  const CountArticles = posts.length % 2 !== 0;
 
   useEffect(() => {
     document.title = "Blogs - Yohanes Rio Irsan";
@@ -36,13 +36,13 @@ function Blog() {
         </div>
         <div className="w-full lg:w-[638px] bg-[#CECECE] p-4 rounded-t-lg rounded-b-md lg:rounded-t-2xl lg:rounded-b-lg drop-shadow-xl mt-4">
           <div className="w-full grid grid-cols-2 gap-3">
-            {Aritcles.map((article, i) => (
+            {posts.map((article, i) => (
               <BlogThumbnail
                 key={i}
-                title={article.title}
+                title={article.meta.title}
                 slug={article.slug}
-                date={article.date}
-                content={article.content}
+                date={article.meta.date}
+                content={article.meta.description}
               />
             ))}
             {CountArticles && (
