@@ -1,5 +1,6 @@
 import animations from "@midudev/tailwind-animations";
 import daisyui from "daisyui";
+import typography from "@tailwindcss/typography";
 
 /** @type {import('tailwindcss').Config} */
 export default {
@@ -49,5 +50,5 @@ export default {
       },
     },
   },
-  plugins: [animations, daisyui],
+  plugins: [animations, daisyui, typography],
 };
