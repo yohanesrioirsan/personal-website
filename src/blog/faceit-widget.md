@@ -4,7 +4,7 @@ date: 13 January 2026
 description: Recently, I got back into playing CS2 on FACEIT, and I’m planning to stream my gameplay again.
 ---
 
-![FaceitOBS](/public/blog/faceit-widget/faceit-obs.png)
+![FaceitOBS](/blog/faceit-widget/faceit-obs.png)
 
 Recently, I got back into playing CS2 on FACEIT, and I’m planning to stream my gameplay again. While setting up my stream, I felt like something was off 😂. I wanted to display my FACEIT stats on screen, such as my current win/loss, level, ELO, and K/D ratio.
 
@@ -33,14 +33,14 @@ You can check it out here:
 1. Open https://faceitobs.online/generate
 2. Input your nickname in the form (case-sensitive).
    For example, if your nickname is “HadeZ”, enter “HadeZ”, not “hadez”.
-   ![FaceitOBS](/public/blog/faceit-widget/tutorial-1.png)
+   ![FaceitOBS](/blog/faceit-widget/tutorial-1.png)
 3. After the user is found, you can select the style or theme you want to display in OBS.
    The default style is Classic a black-and-white theme without any gimmicks.
-   ![FaceitOBS](/public/blog/faceit-widget/tutorial-2.png)
+   ![FaceitOBS](/blog/faceit-widget/tutorial-2.png)
 4. If you’ve already selected the style you want, click the “How To Use” button to get your widget/ overlay URL, which can be used as a Browser Source in OBS.
-   ![FaceitOBS](/public/blog/faceit-widget/tutorial-3.png)
+   ![FaceitOBS](/blog/faceit-widget/tutorial-3.png)
 5. Follow The Steps. And you are all set!
-   ![FaceitOBS](/public/blog/faceit-widget/tutorial-4.png)
+   ![FaceitOBS](/blog/faceit-widget/tutorial-4.png)
 
 This project was built to be lightweight, practical, and streamer-friendly, making it easy for anyone to display their FACEIT stats in real time without extra setup.
 
