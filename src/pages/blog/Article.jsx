@@ -38,18 +38,20 @@ function Article() {
 
           <div
             className="
-    prose max-w-none
-    prose-p:text-black
-    prose-li:text-black
-    prose-li:marker:text-black
-    prose-strong:text-black
-    prose-headings:text-black
-    prose-a:text-black
-    prose-p:text-lg
-    prose-p:my-3
-    prose-headings:my-4
-    prose-h2:mt-6 prose-h2:mb-3
-    "
+                      prose max-w-none
+                      prose-p:text-black
+                      prose-li:text-black
+                      prose-li:marker:text-black
+                      prose-strong:text-black
+                      prose-headings:text-black
+                      prose-a:text-black
+                      prose-p:text-lg
+                      prose-p:my-3
+                      prose-headings:my-4
+                      prose-h2:mt-6 prose-h2:mb-3
+                      prose-img:mx-auto
+                      prose-img:block
+                      "
           >
             <ReactMarkdown
               remarkPlugins={[remarkGfm]}
