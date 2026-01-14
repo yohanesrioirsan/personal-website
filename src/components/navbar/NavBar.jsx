@@ -1,6 +1,15 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 function NavBar() {
+  const location = useLocation();
+
+  const isActive = (path) => {
+    if (path === "/") {
+      return location.pathname === "/";
+    }
+    return location.pathname.startsWith(path);
+  };
+
   return (
     <>
       <nav className="sticky top-0 py-4 animate-slide-in-top z-50">
@@ -10,7 +19,11 @@ function NavBar() {
               <div className="hover:animate-pulse-fade-in">
                 <Link
                   to="/work"
-                  className="text-xl lg:text-2xl text-[#A7A7A7] hover:bg-[#B6D168] py-[10px] px-[25px] rounded-full hover:text-[#4F601F]"
+                  className={`text-xl lg:text-2xl py-[10px] px-[25px] rounded-full transition-colors ${
+                    isActive("/work")
+                      ? "bg-[#B6D168] text-[#4F601F]"
+                      : "text-[#A7A7A7] hover:bg-[#B6D168] hover:text-[#4F601F]"
+                  }`}
                 >
                   Work
                 </Link>
@@ -48,7 +61,11 @@ function NavBar() {
               <div className="hover:animate-pulse-fade-in">
                 <Link
                   to="/writing"
-                  className="text-xl lg:text-2xl text-[#A7A7A7] hover:bg-[#DDBF53] py-[10px] px-[25px] rounded-full hover:text-[#6C5E2A]"
+                  className={`text-xl lg:text-2xl py-[10px] px-[25px] rounded-full transition-colors ${
+                    isActive("/writing")
+                      ? "bg-[#DDBF53] text-[#6C5E2A]"
+                      : "text-[#A7A7A7] hover:bg-[#DDBF53] hover:text-[#6C5E2A]"
+                  }`}
                 >
                   Blogs
                 </Link>

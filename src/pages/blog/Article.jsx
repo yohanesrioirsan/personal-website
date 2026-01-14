@@ -18,20 +18,20 @@ function Article() {
   }, [article]);
 
   return (
-    <article className="min-h-screen container pt-4 px-4 lg:px-52">
+    <article className="min-h-[85vh] container pt-4 px-4 lg:px-[400px]">
       {!article ? (
         <div className="text-black/70 text-center">Sorry. Blog Not Found.</div>
       ) : (
         <div className="flex flex-col justify-center">
           <div className="mb-5">
-            <h1 className="text-[#343434] text-4xl lg:text-6xl font-bold mb-1">
+            <h1 className="text-black text-3xl lg:text-4xl font-bold mb-1">
               {article.meta.title}
             </h1>
 
-            <div className="flex gap-1 items-center mt-4">
-              <img className="w-7 h-5" src={emoji} alt="emoji" />
-              <h2 className="text-md lg:text-lg">
-                Yohanes Rio Irsan - {article.meta.date}
+            <div className="flex gap-1 items-center mt-3">
+              <img className="w-6 h-4" src={emoji} alt="emoji" />
+              <h2 className="text-md text-[#747474]">
+                Yohanes Rio Irsan · {article.meta.date}
               </h2>
             </div>
           </div>

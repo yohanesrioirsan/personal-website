@@ -1,5 +1,11 @@
 [
   {
+    "title": "FaceitOBS",
+    "repository": "https://github.com/yohanesrioirsan/faceit-overlay-obs",
+    "url": "https://faceitobs.online/",
+    "image": "https://raw.githubusercontent.com/yohanesrioirsan/personal-website/refs/heads/master/src/assets/thumbnails/faceit-obs.png"
+  },
+  {
     "title": "Prompt Helper",
     "repository": "https://github.com/yohanesrioirsan/prompt-helper",
     "image": "https://raw.githubusercontent.com/yohanesrioirsan/personal-website/76b7c3d38742a1143969b1d1f929c41adfa36dd8/src/assets/thumbnails/prompt-helper.png"
