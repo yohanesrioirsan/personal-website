@@ -35,25 +35,36 @@ function Blog() {
           </div>
         </div>
         <div className="w-full lg:w-[638px] bg-[#CECECE] p-4 rounded-t-lg rounded-b-md lg:rounded-t-2xl lg:rounded-b-lg drop-shadow-xl mt-4">
-          <div className="w-full grid grid-cols-2 gap-3">
-            {posts.map((article, i) => (
-              <BlogThumbnail
-                key={i}
-                title={article.meta.title}
-                slug={article.slug}
-                date={article.meta.date}
-                content={article.meta.description}
-              />
-            ))}
-            {CountArticles && (
-              <div className="flex items-center justify-center p-6">
-                <h2 className="text-[#A3A3A3] text-xl lg:text-2xl font-semibold text-center">
-                  {"No More Post:("}
-                </h2>
-              </div>
-            )}
-          </div>
-          <div className="w-full grid grid-cols-2 gap-3 mt-3"></div>
+          {posts.length === 0 ? (
+            <div className="flex items-center justify-center p-6">
+              <h2 className="text-[#A3A3A3] text-xl lg:text-2xl font-semibold text-center">
+                yohanesrioirsan is writing...
+              </h2>
+            </div>
+          ) : (
+            <div className="w-full grid grid-cols-2 gap-3">
+              {posts.length > 1 &&
+                posts
+                  .sort((a, b) => b.meta.id - a.meta.id)
+                  .map((article, i) => (
+                    <BlogThumbnail
+                      key={i}
+                      title={article.meta.title}
+                      slug={article.slug}
+                      date={article.meta.date}
+                      content={article.meta.description}
+                    />
+                  ))}
+              {CountArticles && (
+                <div className="flex items-center justify-center p-6">
+                  <h2 className="text-[#A3A3A3] text-xl lg:text-2xl font-semibold text-center">
+                    {"No More Post:("}
+                  </h2>
+                </div>
+              )}
+            </div>
+          )}
+          {/* <div className="w-full grid grid-cols-2 gap-3 mt-3"></div> */}
         </div>
       </div>
     </motion.section>

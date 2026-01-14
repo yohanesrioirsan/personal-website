@@ -15,15 +15,17 @@ function truncateText(text, limit) {
 function BlogThumbnail(props) {
   const { content } = props;
   const { slug } = props;
+  const { title } = props;
 
-  const truncatedText = truncateText(content, 6);
+  const truncatedText = truncateText(content, 8);
+  const titleTruncated = truncateText(title, 6);
 
   return (
     <div className="card bg-white shadow-xl">
       <div className="card-body flex">
         <Link to={`/writing/${slug}`}>
           <h2 className="card-title text-[#343434] text-xl lg:text-2xl font-semibold hover:text-[#DDBF53]">
-            {props.title}
+            {titleTruncated}
           </h2>
         </Link>
         <p>{props.date}</p>

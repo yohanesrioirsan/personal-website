@@ -21,7 +21,7 @@ function NavBar() {
                   to="/work"
                   className={`text-xl lg:text-2xl py-[10px] px-[25px] rounded-full transition-colors ${
                     isActive("/work")
-                      ? "bg-[#B6D168] text-[#4F601F]"
+                      ? "text-[#DDBF53]"
                       : "text-[#A7A7A7] hover:bg-[#B6D168] hover:text-[#4F601F]"
                   }`}
                 >
@@ -63,7 +63,7 @@ function NavBar() {
                   to="/writing"
                   className={`text-xl lg:text-2xl py-[10px] px-[25px] rounded-full transition-colors ${
                     isActive("/writing")
-                      ? "bg-[#DDBF53] text-[#6C5E2A]"
+                      ? "text-[#DDBF53]"
                       : "text-[#A7A7A7] hover:bg-[#DDBF53] hover:text-[#6C5E2A]"
                   }`}
                 >
