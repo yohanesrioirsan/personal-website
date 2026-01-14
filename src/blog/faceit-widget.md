@@ -1,6 +1,6 @@
 ---
 id: 5
-title: How to Add FACEIT Stats to OBS
+title: How To Add FACEIT Stats To OBS
 date: 13 January 2026
 description: Recently, I got back into playing CS2 on FACEIT, and I’m planning to stream my gameplay again.
 ---
