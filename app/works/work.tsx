@@ -3,7 +3,7 @@ import LabelMsg from "../components/LabelMsg";
 
 export default function WorkHome() {
   return (
-    <section>
+    <section className="animate-fadeIn">
       <LabelMsg label1="works" label2="msg:" />
       <BoxMsg>
         <p className="text-white">

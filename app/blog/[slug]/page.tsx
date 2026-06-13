@@ -37,7 +37,7 @@ export default async function BlogPost({ params }: Props) {
     const post = await getPostBySlug(slug);
 
     return (
-      <div className="min-h-screen text-white overflow-x-hidden w-screen">
+      <div className="min-h-screen text-white overflow-x-hidden w-screen animate-fadeIn">
         <div className="w-full px-5 py-16 sm:px-8">
           <header className="mx-auto mb-14 max-w-3xl">
             <h1 className="text-balance text-2xl sm:text-4xl font-semibold leading-tight tracking-tight text-white">

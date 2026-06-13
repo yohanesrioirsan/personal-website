@@ -4,7 +4,7 @@ import BlogListing from "./list";
 
 export default function BlogHome() {
   return (
-    <section>
+    <section className="animate-fadeIn">
       <LabelMsg label1="blog" label2="msg:" />
       <BoxMsg>
         <p className="text-white">Do people even blog nowadays?</p>

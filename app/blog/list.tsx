@@ -16,7 +16,7 @@ export default function BlogListing() {
 
   return (
     <section>
-      <div className="grid grid-cols-3 gap-px">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-px">
         {posts
           .sort((a, b) => b.id - a.id)
           .map((post) => (
