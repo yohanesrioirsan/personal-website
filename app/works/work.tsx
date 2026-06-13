@@ -1,5 +1,6 @@
 import BoxMsg from "../components/BoxMsg";
 import LabelMsg from "../components/LabelMsg";
+import WorkListing from "./list";
 
 export default function WorkHome() {
   return (
@@ -20,6 +21,7 @@ export default function WorkHome() {
         label2="date-format::DD-MM-YYY"
         className="mt-1"
       />
+      <WorkListing />
     </section>
   );
 }
