@@ -14,7 +14,7 @@ site: https://www.faceitobs.online/
 
 ---
 
-![Spicetify](/works/faceit-obs/header.png)
+![FaceitOBS](/works/faceit-obs/header.png)
 
 ## Background
 
