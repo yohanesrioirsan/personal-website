@@ -75,7 +75,7 @@ export default function WorkListing() {
                 </div>
 
                 <Link
-                  href={`/work/${post.slug}`}
+                  href={`/works/${post.slug}`}
                   className="text-white/50 transition-colors hover:text-white!"
                 >
                   view-more
