@@ -20,7 +20,7 @@ export async function generateMetadata({ params }: Props) {
     const post = await getWorkBySlug(slug);
 
     return {
-      title: "0xhdz@blog/" + post.slug + " ",
+      title: "0xhdz@work/" + post.slug + " ",
       description: post.description ?? post.title,
     };
   } catch {
