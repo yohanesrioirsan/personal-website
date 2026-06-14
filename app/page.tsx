@@ -20,10 +20,16 @@ export default function Home() {
         <p>
           My name is Yohanes Rio Irsan. I&apos;m a software engineer focused on
           front-end development, building, breaking, and shipping web things to
-          use. I care about the details, from the way something looks to the way
-          it responds under your cursor. I do backend development too,
-          "sometimes" hehe. Outside of code, I&apos;m usually running on coffee
-          and humbling high-rank VAL/CS lobbies by night
+          use.
+        </p>
+        <p>
+          I care about the details, from the way something looks to the way it
+          responds under your cursor. I do backend development too, "sometimes"
+          hehe.
+        </p>
+        <p>
+          Outside of code, I&apos;m usually running on coffee and humbling
+          high-rank VAL/CS lobbies by night
           <span className="inline-block h-4 w-2 cursor-blink bg-[#D9D9D9E5] align-[-2px]" />
         </p>
       </BoxMsg>
