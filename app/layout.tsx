@@ -7,6 +7,9 @@ export const metadata: Metadata = {
   title: "0xhdz@yohanesrioirsan/home ",
   description:
     "Welcome to the personal website of Yohanes Rio Irsan, a passionate and dedicated software engineer from Indonesia. Explore his portfolio, projects, and insights into web development and design.",
+  icons: {
+    icon: "/0xhdzicon.png",
+  },
 };
 
 export default function RootLayout({
