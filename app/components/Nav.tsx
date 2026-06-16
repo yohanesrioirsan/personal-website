@@ -33,9 +33,11 @@ export default function Nav() {
           href="/"
           className="text-sm font-semibold tracking-normal transition-colors hover:text-[#c8ff57]"
         >
-          <span className="font-light text-white/30">0xhdz</span>
-          <span className="font-light text-white/40">|</span>
-          <span className="font-light text-white/55">yohanes-rio-irsan</span>
+          <span className="hidden md:inline">
+            <span className="font-light text-white/30">0xhdz</span>
+            <span className="font-light text-white/40">|</span>
+            <span className="font-light text-white/55">yohanes-rio-irsan</span>
+          </span>
           <span className="font-light text-white">
             @{isHome ? "home" : pathname.replace("/", "")}
           </span>
