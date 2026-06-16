@@ -1,7 +1,27 @@
+"use client";
+
+import { useState, useEffect } from "react";
 import BoxMsg from "./components/BoxMsg";
 import LabelMsg from "./components/LabelMsg";
+import Terminal from "./components/Terminal";
 
 export default function Home() {
+  const [showTerminal, setShowTerminal] = useState(false);
+
+  useEffect(() => {
+    let last = "";
+    const handler = (e: KeyboardEvent) => {
+      last += e.key;
+      if (last.slice(-2) === "//") {
+        setShowTerminal(true);
+        last = "";
+      }
+      if (last.length > 10) last = last.slice(-10);
+    };
+    window.addEventListener("keydown", handler);
+    return () => window.removeEventListener("keydown", handler);
+  }, []);
+
   return (
     <section className="animate-fadeIn">
       <LabelMsg label1="home" label2="msg:" />
@@ -12,7 +32,6 @@ export default function Home() {
           software engineer building, breaking, and shipping web things from{" "}
           <span className="text-red-500">Indonesia</span>.
         </p>
-
         <p className="mt-6">Welcome to my website.</p>
       </BoxMsg>
       <LabelMsg label1="home" label2="about-me:" className="mt-1" />
@@ -30,9 +49,30 @@ export default function Home() {
         <p>
           Outside of code, I&apos;m usually running on coffee and humbling
           high-rank VAL/CS lobbies by night
-          <span className="inline-block h-4 w-2 cursor-blink bg-[#D9D9D9E5] align-[-2px]" />
+          {!showTerminal ? (
+            <span className="inline-block h-4 w-2 cursor-blink bg-[#D9D9D9E5] align-[-2px]" />
+          ) : (
+            "."
+          )}
         </p>
       </BoxMsg>
+      {showTerminal ? (
+        <>
+          <LabelMsg label1="home" label2="terminal:" className="mt-1" />
+          <BoxMsg>
+            <p className="text-white/20 mb-3">
+              use --help to see available commands
+            </p>
+            <Terminal />
+          </BoxMsg>
+        </>
+      ) : (
+        <BoxMsg>
+          <div>
+            <p className="opacity-5">// try me</p>
+          </div>
+        </BoxMsg>
+      )}
     </section>
   );
 }

@@ -14,7 +14,7 @@ export default function Footer() {
 
   return (
     <footer className="relative z-10 px-6 py-3 bg-black">
-      <div className="flex items-center justify-between">
+      <div className="flex flex-col text-center gap-2 md:flex-row md:text-start md:items-center md:justify-between">
         <Link
           href="/"
           className="text-sm font-semibold tracking-normal transition-colors hover:text-[#c8ff57]"

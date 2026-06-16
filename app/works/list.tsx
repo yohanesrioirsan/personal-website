@@ -67,7 +67,7 @@ export default function WorkListing() {
                       href={post.site}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-white/50 transition-colors hover:text-white!"
+                      className="text-white/70! transition-colors hover:text-white!"
                     >
                       visit-site
                     </a>
@@ -76,9 +76,9 @@ export default function WorkListing() {
 
                 <Link
                   href={`/works/${post.slug}`}
-                  className="text-white/50 transition-colors hover:text-white!"
+                  className="text-white/80! transition-colors hover:text-white!"
                 >
-                  view-more
+                  {"[ view more ]"}
                 </Link>
               </div>
             </article>
