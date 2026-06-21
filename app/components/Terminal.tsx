@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useRef, useEffect, KeyboardEvent } from "react";
+import { useRouter } from "next/navigation";
 
 type OutputLine =
   | { type: "command"; text: string }
@@ -14,6 +15,11 @@ const SOCIALS: Record<string, { label: string; url: string }> = {
   "-yt": { label: "youtube", url: "https://youtube.com/@yohanesrioirsan" },
   "-th": { label: "threads", url: "https://threads.net/@yohanesrioirsan" },
   "-tw": { label: "twitter", url: "https://twitter.com/rioirsan31" },
+};
+
+const ROUTES: Record<string, string> = {
+  works: "/works",
+  blog: "/blog",
 };
 
 const COMMANDS: Record<string, () => OutputLine[]> = {
@@ -83,9 +89,18 @@ const COMMANDS: Record<string, () => OutputLine[]> = {
       ],
     },
   ],
+  ls: () => [
+    {
+      type: "table",
+      rows: [
+        { label: "works", value: "" },
+        { label: "blog ", value: "" },
+      ],
+    },
+  ],
 };
-
 export default function Terminal() {
+  const router = useRouter();
   const [input, setInput] = useState("");
   const [history, setHistory] = useState<string[]>([]);
   const [historyIndex, setHistoryIndex] = useState(-1);
@@ -138,6 +153,27 @@ export default function Terminal() {
             type: "error",
             text: `unknown flag: ${flag} — try "socials" to see options`,
           },
+        ]);
+        return;
+      }
+    }
+
+    if (parts[0] === "cd" && parts[1]) {
+      const target = parts[1];
+      const path = ROUTES[target];
+      if (path) {
+        setOutput((prev) => [
+          ...prev,
+          echoLine,
+          { type: "redirect", text: `navigating to ${target}...` },
+        ]);
+        router.push(path);
+        return;
+      } else {
+        setOutput((prev) => [
+          ...prev,
+          echoLine,
+          { type: "error", text: `cd: no such file or directory: ${target}` },
         ]);
         return;
       }
