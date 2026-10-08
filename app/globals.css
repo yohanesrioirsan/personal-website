@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Styles for markdown rendered from content/projects/*.md. */
+@layer components {
+  .blog-prose { @apply max-w-none break-words text-base leading-8 text-muted; }
+  .blog-prose > * + * { @apply mt-6; }
+  .blog-prose h2 { @apply mb-5 mt-14 scroll-mt-8 text-3xl font-bold leading-tight tracking-[-0.04em] text-ink; }
+  .blog-prose h3 { @apply mb-4 mt-10 scroll-mt-8 text-xl font-semibold tracking-tight text-ink; }
+  .blog-prose a { @apply text-ink underline decoration-line underline-offset-4 hover:decoration-ink; }
+  .blog-prose strong { @apply font-semibold text-ink; }
+  .blog-prose ul { @apply list-disc space-y-2 pl-5; }
+  .blog-prose ol { @apply list-decimal space-y-2 pl-5; }
+  .blog-prose code { @apply rounded bg-[#EFEDE7] px-1.5 py-0.5 text-[0.9em] text-ink; }
+  .blog-prose pre { @apply overflow-x-auto rounded-2xl bg-ink p-5 text-sm text-ivory; }
+  .blog-prose pre code { @apply bg-transparent p-0 text-ivory; }
+  .blog-prose blockquote { @apply rounded-r-xl border-l-2 border-ink bg-[#EFEDE7]/60 px-6 py-4 text-ink; }
+  .blog-prose img { @apply mt-7 h-auto w-full rounded-xl border border-line; }
+  .blog-prose p:has(> em:only-child) { @apply mt-3 text-sm leading-6; }
+  .blog-prose table { @apply w-full border-collapse text-left text-sm; }
+  .blog-prose th { @apply border-b border-line pb-3 pr-4 font-semibold text-ink; }
+  .blog-prose td { @apply border-b border-line py-3 pr-4; }
+  .blog-prose hr { @apply border-line; }
+  .project-prose { @apply max-w-2xl text-base leading-7 text-muted; }
+  .project-prose > * + * { @apply mt-5; }
+  .project-prose h2 { @apply mt-12 text-2xl font-bold tracking-tight text-ink first:mt-0; }
+  .project-prose h3 { @apply mt-8 text-lg font-semibold text-ink; }
+  .project-prose strong { @apply font-semibold text-ink; }
+  .project-prose a { @apply text-ink underline decoration-line underline-offset-4 hover:decoration-ink; }
+  .project-prose ul { @apply list-disc space-y-2 pl-5 marker:text-ink; }
+  .project-prose ol { @apply list-decimal space-y-2 pl-5 marker:font-semibold marker:text-ink; }
+  .project-prose code { @apply rounded bg-[#EFEDE7] px-1.5 py-0.5 text-[0.9em] text-ink; }
+  .project-prose pre { @apply overflow-x-auto rounded-2xl bg-ink p-5 text-sm text-ivory; }
+  .project-prose pre code { @apply bg-transparent p-0 text-ivory; }
+  .project-prose blockquote { @apply border-l-2 border-ink pl-5 italic; }
+  .project-prose img { @apply rounded-2xl border border-line; }
+  .project-prose hr { @apply border-line; }
+}
+
+html { scroll-behavior: smooth; scroll-padding-top: 5.5rem; }
+/* Last-resort failsafe for the loading screen: if JavaScript never hydrates, hide it after 8s.
+   Normally it leaves by itself well before (max 3.5s + exit). Not filled backwards, so it has no
+   effect before the delay. */
+.loading-failsafe { animation: loading-failsafe 0.4s ease 8s forwards; }
+@keyframes loading-failsafe { to { opacity: 0; visibility: hidden; pointer-events: none; } }
+.emoji { font-family: var(--font-emoji), 'Noto Color Emoji', 'Apple Color Emoji', 'Segoe UI Emoji', sans-serif; }
+body { background: #F8F7F3; color: #111111; }
+::selection { background: #111111; color: #F8F7F3; }
+:focus-visible { outline: 2px solid currentColor; outline-offset: 5px; }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { transition-duration: 0.01ms !important; animation-duration: 0.01ms !important; }
+}

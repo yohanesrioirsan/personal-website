@@ -1,0 +1,32 @@
+{
+  "name": "yohanes-portfolio",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev --hostname 0.0.0.0",
+    "build": "next build --webpack",
+    "start": "next start --hostname 0.0.0.0",
+    "typecheck": "tsc --noEmit",
+    "test": "node --test --test-isolation=none tests/*.test.mjs",
+    "og": "node scripts/generate-og.mjs"
+  },
+  "dependencies": {
+    "gray-matter": "4.0.3",
+    "lucide-react": "0.577.0",
+    "marked": "18.1.0",
+    "motion": "12.42.2",
+    "next": "16.3.8",
+    "react": "19.2.8",
+    "react-dom": "19.2.8",
+    "simple-icons": "16.34.0"
+  },
+  "devDependencies": {
+    "@types/node": "26.6.4",
+    "@types/react": "19.2.18",
+    "@types/react-dom": "19.2.3",
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.5.6",
+    "tailwindcss": "3.4.19",
+    "typescript": "5.9.3"
+  }
+}

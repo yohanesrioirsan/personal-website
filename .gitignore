@@ -1,0 +1,30 @@
+# dependencies
+node_modules/
+
+# build output
+.next/
+out/
+.sites-runtime/
+*.tsbuildinfo
+
+# secrets / local environment
+.env
+.env.*
+!.env.example
+*.pem
+
+# OS / editor noise
+.DS_Store
+Thumbs.db
+
+# AI agent instructions, task tracking, and agent configuration (any directory level).
+# Case variants are listed explicitly because Git matches case-sensitively on Linux.
+[Aa][Gg][Ee][Nn][Tt].md
+[Aa][Gg][Ee][Nn][Tt][Ss].md
+[Tt][Aa][Ss][Kk].md
+[Tt][Aa][Ss][Kk][Ss].md
+[Cc][Ll][Aa][Uu][Dd][Ee].md
+[Cc][Ll][Aa][Uu][Dd][Ee].local.md
+[Gg][Ee][Mm][Ii][Nn][Ii].md
+.claude/
+.openai/
