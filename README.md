@@ -1,16 +1,13 @@
-# personal-website
+```
+my personal web built with nextjs, 
+tailwindcss, 
+domain by https://is-a.dev/
+designed on figma by https://owynnkenli.com/
+deployed on vercel,
 
-My personal web, built with [Next.js](https://nextjs.org/) and [Tailwind CSS](https://tailwindcss.com/).
+feel free to clone and develop this repository.
 
-- Domain by [is-a.dev](https://is-a.dev/)
-- Designed on Figma by [owynnkenli.com](https://owynnkenli.com/)
-- Deployed on [Vercel](https://vercel.com/)
-
-Feel free to clone and develop this repository.
-
-```sh
-git clone git@github.com:yohanesrioirsan/personal-website.git
-cd personal-website
+git clone @this
 npm install
 npm run dev
 ```
