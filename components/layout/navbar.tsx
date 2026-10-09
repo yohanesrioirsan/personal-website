@@ -6,6 +6,7 @@ import { useEffect, useRef, useState } from "react";
 import { AnimatePresence, motion, useReducedMotion } from "motion/react";
 import { Menu, X } from "lucide-react";
 import { BrandIcon } from "@/components/ui/brand-icon";
+import { BrandMark } from "@/components/ui/brand-mark";
 import { PillButton } from "@/components/ui/pill-button";
 import { content } from "@/data/content";
 import { ThemeToggle } from "@/components/layout/theme-toggle";
@@ -87,9 +88,10 @@ export function Navbar({ contactUrl }: { contactUrl: string }) {
           {/* Logo is desktop-only; on mobile the header is just the Menu button at the top right. */}
           <Link
             href="/"
-            className="hidden text-lg font-extrabold tracking-[-0.05em] md:block md:text-xl"
+            className="group hidden items-center gap-3 text-lg font-extrabold tracking-[-0.05em] md:flex md:text-xl"
             aria-label="Yohanes home"
           >
+            <BrandMark />
             yohanesrioirsan
           </Link>
           <div className="hidden items-center gap-6 md:flex lg:gap-12">

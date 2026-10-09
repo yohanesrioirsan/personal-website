@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { ArrowUp } from "lucide-react";
 import { BrandIcon } from "@/components/ui/brand-icon";
+import { BrandMark } from "@/components/ui/brand-mark";
 import { content } from "@/data/content";
 
 export function Footer() {
@@ -10,9 +11,10 @@ export function Footer() {
       <div className="flex flex-wrap items-center gap-x-8 gap-y-2">
         <Link
           href="/"
-          className="text-2xl font-extrabold tracking-[-0.07em]"
+          className="group flex items-center gap-3 text-2xl font-extrabold tracking-[-0.07em]"
           aria-label="Yohanes home"
         >
+          <BrandMark />
           yohanesrioirsan
         </Link>
         <p className="text-xs text-muted">
@@ -29,7 +31,7 @@ export function Footer() {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={`${social.label} (opens in a new tab)`}
-                  className="flex h-10 w-10 items-center justify-center rounded-full transition-colors hover:bg-ink hover:text-ivory"
+                  className="flex h-10 w-10 items-center justify-center text-muted transition-colors duration-300 hover:text-ink"
                 >
                   <BrandIcon name={social.icon} className="h-[18px] w-[18px]" />
                 </a>
