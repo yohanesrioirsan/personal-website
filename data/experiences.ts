@@ -7,9 +7,13 @@ export type Experience = {
   slug: string;
   company: string;
   period: string;
+  location?: string;
   role: string;
   description: string;
+  /** Company website, shown as the "Visit Company Website" button. */
+  url?: string;
   technologies: string[];
+  /** Leave empty for remote roles; the entry then renders without the photo collage. */
   photos: CollagePhoto[];
   annotation?: CollageNote;
 };
@@ -20,8 +24,10 @@ export const experiences: Experience[] = [
   {
     slug: "ckl-cargo",
     company: "CKL Cargo",
-    period: "2024 – Present",
+    period: "Feb 2024 – Present",
+    location: "Jakarta, Indonesia",
     role: "Frontend Web Developer",
+    url: "https://cklcargo.com/",
     description:
       "Worked on internal and client-facing web applications supporting logistics and cargo operations. Built responsive interfaces, improved frontend usability, and collaborated with the team to deliver features supporting day-to-day workflows.",
     technologies: ["Next.js", "TypeScript", "Tailwind CSS", "API Integration"],
@@ -61,5 +67,17 @@ export const experiences: Experience[] = [
       className: "right-[2%] top-[54%] w-[30%]",
       arrow: "down",
     },
+  },
+  {
+    slug: "pandora-corp",
+    company: "Pandora Corp",
+    period: "Jul 2025 – Sep 2025",
+    location: "Remote (Makassar, Indonesia)",
+    role: "Freelance Web Development Consultant",
+    url: "https://pandoracorp.id/",
+    description:
+      "Developed the public-facing digital presence for Pandora Corp, a company operating across three core business lines: esports, event organizing, and cybercafe. Designed and built the company profile website to introduce these three lines to the public and communicate the brand clearly.",
+    technologies: ["Next.js", "TypeScript", "Tailwind CSS", "API Restructuring"],
+    photos: [],
   },
 ];
