@@ -105,7 +105,7 @@ export function LoadingScreen() {
                 {/* Soft placeholder in the avatar's reserved box while the image is still loading. */}
                 <div
                   aria-hidden="true"
-                  className={`absolute inset-x-[20%] bottom-[4%] top-[6%] rounded-[45%_45%_28%_28%] bg-[#EFEDE7] transition-opacity duration-300 ${
+                  className={`absolute inset-x-[20%] bottom-[4%] top-[6%] rounded-[45%_45%_28%_28%] bg-sunken transition-opacity duration-300 ${
                     avatarShown ? "opacity-0" : "opacity-100 motion-safe:animate-pulse"
                   }`}
                 />

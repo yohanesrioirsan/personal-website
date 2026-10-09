@@ -8,6 +8,7 @@ import { Menu, X } from "lucide-react";
 import { BrandIcon } from "@/components/ui/brand-icon";
 import { PillButton } from "@/components/ui/pill-button";
 import { content } from "@/data/content";
+import { ThemeToggle } from "@/components/layout/theme-toggle";
 
 const links = [
   { label: "Home", href: "/" },
@@ -107,10 +108,14 @@ export function Navbar({ contactUrl }: { contactUrl: string }) {
                 </Link>
               ))}
             </nav>
-            <PillButton href={cta} size="sm">
-              Let’s Collab
-            </PillButton>
+            <div className="flex items-center gap-3">
+              <ThemeToggle className="h-10 w-10" />
+              <PillButton href={cta} size="sm">
+                Let’s Collab
+              </PillButton>
+            </div>
           </div>
+          <ThemeToggle className="mr-2 md:hidden" />
           <button
             ref={menuButton}
             type="button"

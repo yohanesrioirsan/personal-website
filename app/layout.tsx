@@ -4,6 +4,7 @@ import { Navbar } from "@/components/layout/navbar";
 import { Footer } from "@/components/layout/footer";
 import { LoadingScreen } from "@/components/loading-screen";
 import { SmoothScroll } from "@/components/layout/smooth-scroll";
+import { themeInitScript } from "@/components/layout/theme-toggle";
 import { content } from "@/data/content";
 import { pageMetadata, site } from "@/lib/site";
 import "./globals.css";
@@ -40,15 +41,19 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
+  // Updated to the dark color by ThemeToggle when dark mode is on. color-scheme is set in CSS per theme.
   themeColor: "#F8F7F3",
-  colorScheme: "light",
 };
 
 export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en">
+    // The inline script may add the `dark` class before React hydrates.
+    <html lang="en" suppressHydrationWarning>
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: themeInitScript }} />
+      </head>
       <body
         className={`${inter.variable} ${caveat.variable} ${notoEmoji.variable} overflow-x-clip font-sans antialiased`}
       >

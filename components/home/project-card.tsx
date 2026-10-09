@@ -19,7 +19,7 @@ export function ProjectCard({ project }: { project: ProjectSummary }) {
         <ProjectLogo project={project} size="sm" />
         <div className="min-w-0 flex-1">
           <h3 className="text-xl font-bold tracking-tight">{project.name}</h3>
-          <p className={`mt-1.5 max-w-xs text-sm leading-6 ${dark ? 'text-[#C9C6BE]' : 'text-muted'}`}>{project.description}</p>
+          <p className={`mt-1.5 max-w-xs text-sm leading-6 ${dark ? 'text-ivory/75' : 'text-muted'}`}>{project.description}</p>
         </div>
         <ArrowUpRight
           size={20}

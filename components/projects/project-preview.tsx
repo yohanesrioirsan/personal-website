@@ -11,7 +11,7 @@ export function ProjectPreview({ project, sizes }: { project: ProjectSummary; si
 
   if (cover) {
     return (
-      <div className={`relative aspect-[16/10] overflow-hidden rounded-2xl border ${dark ? 'border-white/10' : 'border-line'}`}>
+      <div className={`relative aspect-[16/10] overflow-hidden rounded-2xl border ${dark ? 'border-ivory/10' : 'border-line'}`}>
         <Image src={cover.src} alt="" fill sizes={sizes} className="object-cover object-center" />
       </div>
     );
@@ -20,10 +20,10 @@ export function ProjectPreview({ project, sizes }: { project: ProjectSummary; si
   return (
     <div
       aria-hidden="true"
-      className={`flex aspect-[16/10] flex-col items-center justify-center gap-3 rounded-2xl ${dark ? 'bg-white/5' : 'bg-[#EFEDE7]'}`}
+      className={`flex aspect-[16/10] flex-col items-center justify-center gap-3 rounded-2xl ${dark ? 'bg-ivory/5' : 'bg-sunken'}`}
     >
       <ProjectLogo project={project} size="lg" />
-      <span className={`text-xs uppercase tracking-[0.14em] ${dark ? 'text-[#9A978F]' : 'text-muted'}`}>Preview coming soon</span>
+      <span className={`text-xs uppercase tracking-[0.14em] ${dark ? 'text-ivory/55' : 'text-muted'}`}>Preview coming soon</span>
     </div>
   );
 }

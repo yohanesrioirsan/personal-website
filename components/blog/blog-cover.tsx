@@ -6,7 +6,7 @@ import type { BlogPost } from '@/lib/blog';
 export function BlogCover({ post, sizes, priority = false }: { post: BlogPost; sizes: string; priority?: boolean }) {
   if (!post.cover) {
     return (
-      <div aria-hidden="true" className="flex h-full w-full items-center justify-center bg-[#EFEDE7] text-muted">
+      <div aria-hidden="true" className="flex h-full w-full items-center justify-center bg-sunken text-muted">
         <NotebookPen size={26} strokeWidth={1.4} />
       </div>
     );

@@ -80,7 +80,7 @@ export function BoardsfxPreview({
   return (
     <div
       aria-hidden="true"
-      className={`flex items-center justify-center gap-2.5 rounded-2xl bg-[#EFEDE7] px-4 sm:gap-4 ${className}`}
+      className={`flex items-center justify-center gap-2.5 rounded-2xl bg-sunken px-4 sm:gap-4 ${className}`}
     >
       {keys.map((key, index) => (
         <span

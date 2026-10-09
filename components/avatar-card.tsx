@@ -6,6 +6,7 @@ import { useEffect, useId, useRef, useState } from 'react';
 import { EyeTrackingAvatar } from '@/components/eye-tracking-avatar';
 import { CurvedArrow, Rays } from '@/components/ui/doodles';
 import { TiltIn } from '@/components/ui/tilt-in';
+import { useIsDark } from '@/components/layout/theme-toggle';
 import { EditorBubble } from '@/components/workspace/editor-bubble';
 import { SpotifyBubble } from '@/components/workspace/spotify-bubble';
 
@@ -109,6 +110,8 @@ function DroppingLanyard() {
   const caption = useRef<HTMLDivElement>(null);
   const [dropped, setDropped] = useState(false);
   const [hovered, setHovered] = useState(false);
+  // The default near-black strap would disappear against the dark page.
+  const dark = useIsDark();
 
   useEffect(() => {
     const check = () => {
@@ -140,6 +143,7 @@ function DroppingLanyard() {
       {dropped && (
         <Lanyard
           frontImage="/assets/lanyard.webp"
+          strapColor={dark ? '#3A3936' : '#111111'}
           size={0.45}
           className="pointer-events-none"
           onHoverChange={setHovered}

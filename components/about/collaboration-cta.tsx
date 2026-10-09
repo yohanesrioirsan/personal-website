@@ -20,15 +20,15 @@ export function CollaborationCta() {
             <br className="hidden md:block" /> in mind?
           </h2>
         </div>
-        <div className="md:border-l md:border-white/10 md:pl-10">
-          <p className="max-w-md text-base leading-7 text-[#D0CEC8]">
+        <div className="md:border-l md:border-ivory/10 md:pl-10">
+          <p className="max-w-md text-base leading-7 text-ivory/80">
             I’m always open to new opportunities, collaborations, or just a casual chat about tech.
           </p>
           <div className="mt-6">
             {content.contactUrl ? (
               <CollabLink light size="sm" />
             ) : (
-              <p className="text-sm text-[#BBB8AF]">Personal contact details will be added soon.</p>
+              <p className="text-sm text-ivory/70">Personal contact details will be added soon.</p>
             )}
           </div>
         </div>

@@ -27,7 +27,7 @@ export function ProjectListCard({ project }: { project: ProjectSummary }) {
           <div className="min-w-0 flex-1">
             <h2 className="text-xl font-bold tracking-tight">{project.name}</h2>
             <p
-              className={`mt-1.5 max-w-md text-sm leading-6 ${dark ? "text-[#C9C6BE]" : "text-muted"}`}
+              className={`mt-1.5 max-w-md text-sm leading-6 ${dark ? "text-ivory/75" : "text-muted"}`}
             >
               {project.description}
             </p>
@@ -46,7 +46,7 @@ export function ProjectListCard({ project }: { project: ProjectSummary }) {
             {project.tags.map((tag) => (
               <li
                 key={tag}
-                className={`rounded-full px-3 py-1.5 text-xs ${dark ? "bg-white/10 text-[#E4E1D9]" : "border border-line text-muted"}`}
+                className={`rounded-full px-3 py-1.5 text-xs ${dark ? "bg-ivory/10 text-ivory/90" : "border border-line text-muted"}`}
               >
                 {tag}
               </li>

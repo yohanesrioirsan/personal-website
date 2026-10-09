@@ -8,7 +8,7 @@ export function BlogCompactCard({ post, headingLevel = 'h2' }: { post: BlogPost;
   return (
     <Link
       href={`/blogs/${post.slug}`}
-      className="group flex h-full items-start gap-4 rounded-3xl border border-line bg-surface/50 p-3 transition-colors hover:border-[#BDBAB2] sm:gap-5 sm:p-4"
+      className="group flex h-full items-start gap-4 rounded-3xl border border-line bg-surface/50 p-3 transition-colors hover:border-muted/50 sm:gap-5 sm:p-4"
     >
       <div className="relative aspect-[4/3] w-28 shrink-0 overflow-hidden rounded-2xl border border-line sm:w-40">
         <BlogCover post={post} sizes="160px" />

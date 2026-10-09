@@ -8,7 +8,7 @@ export function BlogFeaturedCard({ post }: { post: BlogPost }) {
   return (
     <Link
       href={`/blogs/${post.slug}`}
-      className="group flex h-full flex-col overflow-hidden rounded-3xl border border-line bg-surface/50 transition-colors hover:border-[#BDBAB2]"
+      className="group flex h-full flex-col overflow-hidden rounded-3xl border border-line bg-surface/50 transition-colors hover:border-muted/50"
     >
       <div className="relative aspect-[16/9] overflow-hidden border-b border-line lg:aspect-auto lg:min-h-[280px] lg:flex-1">
         <BlogCover post={post} sizes="(max-width: 1024px) 95vw, 640px" priority />

@@ -2,6 +2,28 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Theme tokens as RGB channels (consumed by tailwind.config.ts). Light is the default; the `dark`
+   class on <html> is set before first paint by the inline script in app/layout.tsx.
+   Dark mode inverts the palette, so ink-on-ivory surfaces become ivory-on-ink and vice versa. */
+:root {
+  color-scheme: light;
+  --color-ivory: 248 247 243;   /* #F8F7F3 page */
+  --color-ink: 17 17 17;        /* #111111 text, dark surfaces */
+  --color-muted: 104 102 95;    /* #68665F */
+  --color-line: 232 230 224;    /* #E8E6E0 */
+  --color-surface: 255 255 255; /* #FFFFFF */
+  --color-sunken: 239 237 231;  /* #EFEDE7 placeholders, inline code */
+}
+.dark {
+  color-scheme: dark;
+  --color-ivory: 18 18 17;      /* #121211 */
+  --color-ink: 240 238 232;     /* #F0EEE8 */
+  --color-muted: 160 157 149;   /* #A09D95 */
+  --color-line: 44 43 40;       /* #2C2B28 */
+  --color-surface: 28 28 26;    /* #1C1C1A */
+  --color-sunken: 34 33 31;     /* #22211F */
+}
+
 /* Styles for markdown rendered from content/projects/*.md. */
 @layer components {
   .blog-prose { @apply max-w-none break-words text-base leading-8 text-muted; }
@@ -12,10 +34,10 @@
   .blog-prose strong { @apply font-semibold text-ink; }
   .blog-prose ul { @apply list-disc space-y-2 pl-5; }
   .blog-prose ol { @apply list-decimal space-y-2 pl-5; }
-  .blog-prose code { @apply rounded bg-[#EFEDE7] px-1.5 py-0.5 text-[0.9em] text-ink; }
+  .blog-prose code { @apply rounded bg-sunken px-1.5 py-0.5 text-[0.9em] text-ink; }
   .blog-prose pre { @apply overflow-x-auto rounded-2xl bg-ink p-5 text-sm text-ivory; }
   .blog-prose pre code { @apply bg-transparent p-0 text-ivory; }
-  .blog-prose blockquote { @apply rounded-r-xl border-l-2 border-ink bg-[#EFEDE7]/60 px-6 py-4 text-ink; }
+  .blog-prose blockquote { @apply rounded-r-xl border-l-2 border-ink bg-sunken/60 px-6 py-4 text-ink; }
   .blog-prose img { @apply mt-7 h-auto w-full rounded-xl border border-line; }
   .blog-prose p:has(> em:only-child) { @apply mt-3 text-sm leading-6; }
   .blog-prose table { @apply w-full border-collapse text-left text-sm; }
@@ -30,7 +52,7 @@
   .project-prose a { @apply text-ink underline decoration-line underline-offset-4 hover:decoration-ink; }
   .project-prose ul { @apply list-disc space-y-2 pl-5 marker:text-ink; }
   .project-prose ol { @apply list-decimal space-y-2 pl-5 marker:font-semibold marker:text-ink; }
-  .project-prose code { @apply rounded bg-[#EFEDE7] px-1.5 py-0.5 text-[0.9em] text-ink; }
+  .project-prose code { @apply rounded bg-sunken px-1.5 py-0.5 text-[0.9em] text-ink; }
   .project-prose pre { @apply overflow-x-auto rounded-2xl bg-ink p-5 text-sm text-ivory; }
   .project-prose pre code { @apply bg-transparent p-0 text-ivory; }
   .project-prose blockquote { @apply border-l-2 border-ink pl-5 italic; }
@@ -45,12 +67,20 @@ html { scroll-behavior: smooth; scroll-padding-top: 5.5rem; }
 .loading-failsafe { animation: loading-failsafe 0.4s ease 8s forwards; }
 @keyframes loading-failsafe { to { opacity: 0; visibility: hidden; pointer-events: none; } }
 .emoji { font-family: var(--font-emoji), 'Noto Color Emoji', 'Apple Color Emoji', 'Segoe UI Emoji', sans-serif; }
-body { background: #F8F7F3; color: #111111; }
-::selection { background: #111111; color: #F8F7F3; }
+body { background: rgb(var(--color-ivory)); color: rgb(var(--color-ink)); }
+::selection { background: rgb(var(--color-ink)); color: rgb(var(--color-ivory)); }
 :focus-visible { outline: 2px solid currentColor; outline-offset: 5px; }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   *, *::before, *::after { transition-duration: 0.01ms !important; animation-duration: 0.01ms !important; }
+}
+
+/* Theme switch: ThemeToggle animates the new snapshot with a growing circle clip-path, so turn off
+   the default cross-fade and let the new theme paint straight over the old one. */
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation: none;
+  mix-blend-mode: normal;
 }
 
 /* Avatar card hover: Apple logo glow + screen light */

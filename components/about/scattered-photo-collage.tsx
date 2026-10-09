@@ -51,7 +51,7 @@ function PhotoFrame({ photo, sizes }: { photo: CollagePhoto; sizes: string }) {
         <div
           role="img"
           aria-label={`Photo placeholder: ${photo.alt}`}
-          className="flex h-full w-full flex-col items-center justify-center gap-2 rounded-xl border border-dashed border-[#D6D3CA] bg-[#EFEDE7] p-3 text-center text-muted"
+          className="flex h-full w-full flex-col items-center justify-center gap-2 rounded-xl border border-dashed border-muted/30 bg-sunken p-3 text-center text-muted"
         >
           <ImageIcon size={20} strokeWidth={1.4} aria-hidden="true" />
           <span className="text-[11px] font-medium uppercase tracking-[0.12em]">
