@@ -1,15 +1,16 @@
 'use client';
 
 import { Pause, Play, SkipBack, SkipForward } from 'lucide-react';
+import Image from 'next/image';
 import { useEffect, useState } from 'react';
 import { siSpotify } from 'simple-icons';
 
-/** On repeat while working — the bands from the laptop stickers. */
+/** Favorite song from each band on the laptop stickers. Lengths are approximate. */
 const tracks = [
-  { title: 'Evaluasi', artist: 'Hindia', length: 214, cover: 'from-[#c9b8a0] to-[#5b4a3a]' },
-  { title: 'Nina', artist: '.Feast', length: 266, cover: 'from-[#e8d7b0] to-[#7a5c3d]' },
-  { title: '33x', artist: 'Perunggu', length: 232, cover: 'from-[#d98c5f] to-[#5a2d1a]' },
-  { title: 'Konservatif', artist: 'The Adams', length: 198, cover: 'from-[#9fb7c9] to-[#2f4656]' },
+  { title: 'Untuk Apa / Untuk Apa', artist: 'Hindia', length: 254, cover: '/images/band/hindia.webp' },
+  { title: 'Hanya Kau', artist: 'The Adams', length: 221, cover: '/images/band/the-adams.webp' },
+  { title: 'Gemilang', artist: 'Perunggu', length: 243, cover: '/images/band/perunggu.webp' },
+  { title: 'Sectumsempra', artist: '.Feast', length: 236, cover: '/images/band/feast.webp' },
 ];
 
 const time = (seconds: number) => `${Math.floor(seconds / 60)}:${String(seconds % 60).padStart(2, '0')}`;
@@ -45,9 +46,7 @@ export function SpotifyBubble() {
         {playing ? 'Listening on Spotify' : 'Paused on Spotify'}
       </div>
       <div className="mt-3 flex items-center gap-3">
-        <div className={`relative grid h-12 w-12 shrink-0 place-items-center overflow-hidden rounded-lg bg-gradient-to-br ${track.cover}`}>
-          <span className="text-lg font-extrabold tracking-tight text-white/90 mix-blend-overlay">{track.artist.replace('.', '').slice(0, 2)}</span>
-        </div>
+        <Image src={track.cover} alt={`${track.artist} cover`} width={48} height={48} className="h-12 w-12 shrink-0 rounded-lg bg-ivory/10 object-cover" />
         <div className="min-w-0 flex-1">
           <p className="truncate text-sm font-semibold leading-tight">{track.title}</p>
           <p className="truncate text-xs text-ivory/60">{track.artist}</p>
