@@ -29,7 +29,7 @@ export function AboutHero() {
           <CollabLink />
         </div>
       </Reveal>
-      <AvatarCard words={["Build", "Explore", "Learn", "Repeat"]} />
+      <AvatarCard words={["Build", "Explore", "Learn", "Repeat"]} lanyard />
     </section>
   );
 }

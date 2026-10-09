@@ -83,18 +83,41 @@ export function EyeTrackingAvatar() {
     };
   }, []);
 
-  return <div ref={container} className="relative aspect-[1382/1138] w-full">
-    <Image src="/images/avatar-eyeless.png" alt="Yohanes’s illustrated avatar peeking over a laptop covered in developer and music stickers" fill sizes="(max-width: 768px) 85vw, 480px" priority style={{ clipPath: `url(#${id}-whites)` }} />
+  return <div ref={container} className="relative aspect-[1382/1138] w-full overflow-hidden">
+    <Image src="/images/avatar-eyeless.png" alt="Yohanes's illustrated avatar peeking over a laptop covered in developer and music stickers" fill sizes="(max-width: 768px) 85vw, 480px" priority style={{ clipPath: `url(#${id}-whites)` }} />
     <svg viewBox="0 0 1382 1138" className="pointer-events-none absolute inset-0 h-full w-full" aria-hidden="true">
       <defs>
         <clipPath id={`${id}-whites`} clipPathUnits="objectBoundingBox"><path d={eyeShapes[0]} transform="scale(0.000723589 0.000878735)" /><path d={eyeShapes[1]} transform="scale(0.000723589 0.000878735)" /></clipPath>
         <mask id={`${id}-original`} maskUnits="userSpaceOnUse" x="0" y="0" width="1382" height="1138"><rect width="1382" height="1138" fill="white" />{eyeShapes.map((shape, index) => <path key={index} d={shape} fill="black" />)}</mask>
         {eyes.map((eye, index) => <g key={index}><clipPath id={`${id}-eye-${index}`}><path d={eyeShapes[index]} /></clipPath><clipPath id={`${id}-iris-${index}`}><ellipse cx={eye.x} cy={eye.y} rx={eye.rx} ry={eye.ry} /></clipPath></g>)}
+
+        {/* Screen light spilling up from the lid's top edge (y≈662), spanning the lid's width (x≈280–1116). */}
+        <linearGradient id={`${id}-screen-glow`} x1="0" y1="1" x2="0" y2="0">
+          <stop offset="0%" stopColor="#ffffff" stopOpacity="0.45" />
+          <stop offset="35%" stopColor="#ffffff" stopOpacity="0.18" />
+          <stop offset="100%" stopColor="#ffffff" stopOpacity="0" />
+        </linearGradient>
+        <linearGradient id={`${id}-screen-edges`} x1="0" y1="0" x2="1" y2="0">
+          <stop offset="0%" stopColor="white" stopOpacity="0" />
+          <stop offset="6%" stopColor="white" />
+          <stop offset="94%" stopColor="white" />
+          <stop offset="100%" stopColor="white" stopOpacity="0" />
+        </linearGradient>
+        <mask id={`${id}-screen-mask`} maskUnits="userSpaceOnUse" x="280" y="402" width="836" height="260"><rect x="280" y="402" width="836" height="260" fill={`url(#${id}-screen-edges)`} /></mask>
+        <filter id={`${id}-logo-glow`} x="-50%" y="-50%" width="200%" height="200%">
+          <feGaussianBlur in="SourceGraphic" stdDeviation="8" result="blur" />
+          <feMerge><feMergeNode in="blur" /><feMergeNode in="SourceGraphic" /></feMerge>
+        </filter>
       </defs>
+
       {/* Enlarge only the sclera texture so the generated eyelid never enters the original eye mask. */}
       {eyes.map((eye, index) => <g key={`white-${eye.x}`} clipPath={`url(#${id}-eye-${index})`}><g transform={`translate(${eye.x} ${eye.y}) scale(1.4) translate(${-eye.x} ${-eye.y})`}><image href="/images/avatar-eyeless.png" width="1382" height="1138" /></g></g>)}
       <image href="/assets/emoji.webp" width="1382" height="1138" mask={`url(#${id}-original)`} />
       {eyes.map((eye, index) => <g key={eye.x} clipPath={`url(#${id}-eye-${index})`}><g ref={node => { pupils.current[index] = node; }}><image href="/assets/emoji.webp" width="1382" height="1138" clipPath={`url(#${id}-iris-${index})`} /></g></g>)}
+
+      {/* Lit Apple logo: white mask extracted pixel-for-pixel from emoji.webp's logo (bbox 635,827 123×145). */}
+      <image href="/images/apple-logo-glow.png" x="635" y="827" width="123" height="145" filter={`url(#${id}-logo-glow)`} className="avatar-glow-layer" />
+      <rect x="280" y="402" width="836" height="260" fill={`url(#${id}-screen-glow)`} mask={`url(#${id}-screen-mask)`} className="avatar-glow-layer" style={{ mixBlendMode: 'screen' }} />
     </svg>
   </div>;
 }

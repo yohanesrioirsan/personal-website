@@ -1,7 +1,8 @@
 import Image from "next/image";
 import { AvatarCard } from "@/components/avatar-card";
-import { CollabLink } from "@/components/ui/collab-link";
+import { PillButton } from "@/components/ui/pill-button";
 import { Reveal } from "@/components/ui/reveal";
+import { WelcomeBubble } from "@/components/home/welcome-bubble";
 import { SectionEyebrow } from "@/components/ui/section-eyebrow";
 
 export function HomeHero() {
@@ -17,14 +18,17 @@ export function HomeHero() {
         <h1 className="mt-6 text-[min(20vw,9.5rem)] font-extrabold leading-[0.95] tracking-[-0.06em] md:text-[clamp(3rem,7vw,6.25rem)] md:leading-[0.98]">
           <span className="flex items-center gap-[0.12em] md:gap-4">
             Hi, I’m
-            <Image
-              src="/assets/emoji2.webp"
-              alt=""
-              width={744}
-              height={440}
-              className="h-[0.75em] w-auto shrink-0 rounded-[0.18em] object-cover md:rounded-2xl"
-              priority
-            />
+            <span className="relative block shrink-0">
+              <Image
+                src="/assets/emoji2.webp"
+                alt=""
+                width={744}
+                height={440}
+                className="block h-[0.75em] w-auto rounded-[0.18em] object-cover md:rounded-2xl"
+                priority
+              />
+              <WelcomeBubble />
+            </span>
           </span>
           <span className="mt-1 block">Yohanes</span>
         </h1>
@@ -35,7 +39,9 @@ export function HomeHero() {
         </p>
         <div className="mt-8 md:mt-9">
           {/* Full-width, thumb-friendly button on phones; normal pill from sm up. */}
-          <CollabLink className="w-full justify-between sm:w-auto sm:justify-start" />
+          <PillButton href="https://path.cv/yohanesrioirsan" className="w-full justify-between sm:w-auto sm:justify-start">
+            View Resume
+          </PillButton>
         </div>
       </Reveal>
       <AvatarCard words={["Build", "Deploy", "Repeat"]} />

@@ -138,6 +138,7 @@ export function Navbar({ contactUrl }: { contactUrl: string }) {
             animate={reduced ? { opacity: 1 } : { y: 0 }}
             exit={reduced ? { opacity: 0 } : { y: "-100%" }}
             transition={{ duration: reduced ? 0.2 : 0.6, ease: EASE }}
+            data-lenis-prevent
             className="fixed inset-0 z-50 flex h-[100dvh] flex-col overflow-y-auto bg-ivory px-5 py-3 md:hidden"
           >
             <div className="flex justify-end">

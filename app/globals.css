@@ -52,3 +52,18 @@ body { background: #F8F7F3; color: #111111; }
   html { scroll-behavior: auto; }
   *, *::before, *::after { transition-duration: 0.01ms !important; animation-duration: 0.01ms !important; }
 }
+
+/* Avatar card hover: Apple logo glow + screen light */
+.avatar-glow-layer {
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+.group:hover .avatar-glow-layer {
+  opacity: 1;
+}
+
+/* Avatar workspace bubbles: Spotify equalizer bars + editor caret. */
+.eq-bar { height: 30%; animation: eq-bar 0.9s ease-in-out infinite alternate; }
+@keyframes eq-bar { 0% { height: 25%; } 50% { height: 100%; } 100% { height: 45%; } }
+.caret { animation: caret 1s steps(1) infinite; }
+@keyframes caret { 50% { opacity: 0; } }

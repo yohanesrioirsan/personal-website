@@ -3,6 +3,7 @@ import { Caveat, Inter, Noto_Color_Emoji } from "next/font/google";
 import { Navbar } from "@/components/layout/navbar";
 import { Footer } from "@/components/layout/footer";
 import { LoadingScreen } from "@/components/loading-screen";
+import { SmoothScroll } from "@/components/layout/smooth-scroll";
 import { content } from "@/data/content";
 import { pageMetadata, site } from "@/lib/site";
 import "./globals.css";
@@ -51,6 +52,7 @@ export default function RootLayout({
       <body
         className={`${inter.variable} ${caveat.variable} ${notoEmoji.variable} overflow-x-clip font-sans antialiased`}
       >
+        <SmoothScroll />
         <LoadingScreen />
         <a
           href="#main"
