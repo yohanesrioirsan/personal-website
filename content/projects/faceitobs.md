@@ -16,12 +16,18 @@ accent: "#FF5500"
 featured: true
 order: 1
 gallery:
-  - src: /images/work/faceitobs/FaceitOBS-FACEIT-stats-overlays-for-OBS-10-08-2026_07_41_PM.png
+  - src: /images/work/faceitobs/1.webp
     alt: FaceitOBS home page with the headline “Frag out. We’ll keep score.” next to an OBS Studio live setup showing the overlay
-  - src: /images/work/faceitobs/Build-Your-Overlay-FaceitOBS-10-08-2026_07_42_PM.png
-    alt: The overlay builder, with a player search, a list of player-card templates, and a live preview of a vertical player card
-  - src: /images/work/faceitobs/aFaceitOBS-FACEIT-stats-overlays-for-OBS-10-08-2026_07_41_PM.png
-    alt: The “Test the overlay in frame” dialog, previewing a player card on top of in-game CS2 footage with zoom, reset, and replay controls
+  - src: /images/work/faceitobs/2.webp
+    alt: FaceitOBS home page with the headline “Frag out. We’ll keep score.” next to an OBS Studio live setup showing the overlay
+  - src: /images/work/faceitobs/3.webp
+    alt: FaceitOBS home page with the headline “Frag out. We’ll keep score.” next to an OBS Studio live setup showing the overlay
+  - src: /images/work/faceitobs/4.webp
+    alt: FaceitOBS home page with the headline “Frag out. We’ll keep score.” next to an OBS Studio live setup showing the overlay
+  - src: /images/work/faceitobs/5.webp
+    alt: FaceitOBS home page with the headline “Frag out. We’ll keep score.” next to an OBS Studio live setup showing the overlay
+  - src: /images/work/faceitobs/6.webp
+    alt: FaceitOBS home page with the headline “Frag out. We’ll keep score.” next to an OBS Studio live setup showing the overlay
 features:
   - Real-time FACEIT stats
   - Customizable overlay design
