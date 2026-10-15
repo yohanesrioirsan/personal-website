@@ -1,7 +1,7 @@
 import assert from 'node:assert/strict';
 import test from 'node:test';
 import { readFileSync } from 'node:fs';
-import { getBlogPosts, getBlogPost, parseBlogPost } from '../lib/blog.ts';
+import { getBlogPosts, getBlogPost, parseBlogPost, sortBlogPosts } from '../lib/blog.ts';
 
 test('the article produces dated content, section links, and nine reserved-size screenshots', async () => {
   const posts = await getBlogPosts();
@@ -28,10 +28,10 @@ test('duplicate headings receive unique working anchor IDs', async () => {
   assert.deepEqual(post.headings.map(heading => heading.id), ['same-heading', 'same-heading-2']);
 });
 
-test('all imported posts have valid covers, image dimensions, and newest-first ordering', async () => {
+test('all imported posts have valid covers, image dimensions, and pinned-first ordering', async () => {
   const posts = await getBlogPosts();
   assert.deepEqual(posts.map(post => post.slug), [
-    'my-first-vibe-code', 'windows-tweak', 'custom-terminal-ui',
+    'who-am-i', 'my-first-vibe-code', 'windows-tweak', 'custom-terminal-ui',
     'custom-spotify-client', 'faceit-stats-widget', 'hello-world',
   ]);
   for (const post of posts) {
@@ -42,4 +42,30 @@ test('all imported posts have valid covers, image dimensions, and newest-first o
     for (const heading of post.headings) assert.ok(post.html.includes(`id="${heading.id}"`));
   }
   assert.equal((await getBlogPost('hello-world')).headings.length, 0);
+  const pinned = await getBlogPost('who-am-i');
+  assert.equal(pinned.pinned, true);
+  assert.equal(pinned.cover, '/images/blog/me/thumbnail.webp');
+  assert.match(pinned.html, /src="\/images\/blog\/me\/thumbnail.webp"/);
+});
+
+test('only a boolean true frontmatter value pins a post', async () => {
+  const source = '---\ntitle: Example\ndescription: Example post\ndate: 2026-08-30\n';
+  for (const [frontmatter, expected] of [['pinned: true\n', true], ['pinned: false\n', false], ['', false], ['pinned: "true"\n', false]]) {
+    const post = await parseBlogPost(`${source}${frontmatter}---\n\nExample.`, 'example');
+    assert.equal(post.pinned, expected);
+  }
+});
+
+test('older pinned posts precede newer posts, with dates descending within each group', async () => {
+  const post = await parseBlogPost('---\ntitle: Example\ndescription: Example post\ndate: 2026-08-30\n---\n\nExample.', 'example');
+  const posts = [
+    { ...post, slug: 'newest', date: '2026-10-15' },
+    { ...post, slug: 'older-pin', date: '2025-01-01', pinned: true },
+    { ...post, slug: 'older', date: '2026-08-30' },
+    { ...post, slug: 'newer-pin', date: '2025-02-01', pinned: true },
+  ];
+  assert.deepEqual(sortBlogPosts(posts).map(post => post.slug), ['newer-pin', 'older-pin', 'newest', 'older']);
+  assert.deepEqual(sortBlogPosts(posts.map(post => ({ ...post, pinned: false }))).map(post => post.slug), ['newest', 'older', 'newer-pin', 'older-pin']);
+  assert.equal(posts[0].slug, 'newest');
+  assert.deepEqual(sortBlogPosts([]), []);
 });

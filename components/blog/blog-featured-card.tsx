@@ -15,7 +15,7 @@ export function BlogFeaturedCard({ post }: { post: BlogPost }) {
       </div>
       <div className="p-6 md:p-8">
         <div className="flex items-center gap-3">
-          <span className="rounded-full bg-ink px-2.5 py-1 text-[10px] font-medium uppercase tracking-[0.12em] text-ivory">Latest</span>
+          <span className="rounded-full bg-ink px-2.5 py-1 text-[10px] font-medium uppercase tracking-[0.12em] text-ivory">{post.pinned ? 'Pinned' : 'Latest'}</span>
           <BlogDate post={post} />
         </div>
         <div className="mt-4 flex items-start justify-between gap-5">

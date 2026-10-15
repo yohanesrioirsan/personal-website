@@ -14,7 +14,10 @@ export function BlogCompactCard({ post, headingLevel = 'h2' }: { post: BlogPost;
         <BlogCover post={post} sizes="160px" />
       </div>
       <div className="min-w-0 flex-1 py-1 pr-1">
-        <BlogDate post={post} />
+        <div className="flex flex-wrap items-center gap-x-3 gap-y-1">
+          {post.pinned && <span className="text-xs font-medium">Pinned</span>}
+          <BlogDate post={post} />
+        </div>
         <Heading className="mt-1.5 text-base font-bold leading-snug tracking-[-0.02em] sm:text-lg">{post.title}</Heading>
         <p className="mt-1.5 line-clamp-2 text-sm leading-6 text-muted">{post.description}</p>
         <BlogReadTime post={post} className="mt-2.5" />

@@ -10,6 +10,7 @@ export type BlogPost = {
   description: string;
   date: string;
   dateLabel: string;
+  pinned: boolean;
   cover: string | null;
   coverAlt: string;
   readingMinutes: number;
@@ -69,16 +70,20 @@ export async function parseBlogPost(source: string, slug: string): Promise<BlogP
   const html = marked.parser(tokens, { renderer });
   const words = content.replace(/!\[[^\]]*\]\([^)]*\)/g, '').trim().split(/\s+/).length;
   return {
-    slug, title, description, date,
+    slug, title, description, date, pinned: data.pinned === true,
     dateLabel: new Intl.DateTimeFormat('en-US', { month: 'short', day: 'numeric', year: 'numeric', timeZone: 'UTC' }).format(timestamp),
     cover, coverAlt: typeof data.coverAlt === 'string' ? data.coverAlt : title,
     readingMinutes: Math.max(1, Math.ceil(words / 200)), headings, html,
   };
 }
 
+export function sortBlogPosts(posts: BlogPost[]): BlogPost[] {
+  return [...posts].sort((a, b) => Number(b.pinned) - Number(a.pinned) || b.date.localeCompare(a.date));
+}
+
 let cache: Promise<BlogPost[]> | null = null;
 export function getBlogPosts(): Promise<BlogPost[]> {
-  cache ??= Promise.all(readdirSync(directory).filter(file => file.endsWith('.md')).map(file => parseBlogPost(readFileSync(path.join(directory, file), 'utf8'), file.slice(0, -3)))).then(posts => posts.sort((a, b) => b.date.localeCompare(a.date)));
+  cache ??= Promise.all(readdirSync(directory).filter(file => file.endsWith('.md')).map(file => parseBlogPost(readFileSync(path.join(directory, file), 'utf8'), file.slice(0, -3)))).then(sortBlogPosts);
   return cache;
 }
 

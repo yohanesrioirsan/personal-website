@@ -19,7 +19,7 @@ export const metadata: Metadata = pageMetadata({
 const SIDE_COUNT = 2;
 
 export default async function BlogsPage() {
-  const posts = await getBlogPosts(); // newest first
+  const posts = await getBlogPosts();
   const [featured, ...rest] = posts;
   const side = rest.slice(0, SIDE_COUNT);
   const more = rest.slice(SIDE_COUNT);
@@ -31,7 +31,7 @@ export default async function BlogsPage() {
       {featured ? (
         <>
           <section
-            aria-label="Latest posts"
+            aria-label={featured.pinned ? "Pinned and latest posts" : "Latest posts"}
             className={`grid gap-3 ${side.length ? "lg:grid-cols-[1.25fr_1fr]" : ""}`}
           >
             <Reveal className="flex [&>*]:w-full">
