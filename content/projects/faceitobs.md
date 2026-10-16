@@ -14,7 +14,7 @@ tags: [Web App, Streaming, FACEIT, Open Source]
 theme: light
 accent: "#FF5500"
 featured: true
-order: 1
+order: 2
 gallery:
   - src: /images/work/faceitobs/1.webp
     alt: FaceitOBS home page with the headline “Frag out. We’ll keep score.” next to an OBS Studio live setup showing the overlay

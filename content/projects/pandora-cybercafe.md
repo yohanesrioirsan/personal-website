@@ -13,7 +13,7 @@ tags: [Company Web, Web App]
 theme: light
 accent: "#4B2BD6"
 featured: true
-order: 3
+order: 5
 gallery:
   - src: /images/work/pandora-cybercafe/Pandora-Cybercafe-It-s-not-just-a-net-It-s-Cybercafe-10-08-2026_10_14_PM.webp
     alt: Pandora Corp Web App

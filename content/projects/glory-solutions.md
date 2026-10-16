@@ -13,7 +13,7 @@ tags: [Company Web]
 theme: light
 accent: "#4B2BD6"
 featured: true
-order: 5
+order: 6
 gallery:
   - src: /images/work/glory/Glory-Solutions-LLC-Staffing-Agency-in-NJ-and-PA-10-08-2026_09_37_PM.png
     alt: Glory Solutions Web App
