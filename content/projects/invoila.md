@@ -5,8 +5,8 @@ url: https://invoila.site
 sourceUrl:
 type: Web App
 year: 2026
-stack: [Next.js, TypeScript, Tailwind CSS, shadcn/ui]
-status: In Development
+stack: [Next.js, TypeScript, Tailwind CSS, shadcn/ui, Supabase, Resend]
+status: Live
 categories: [Web App]
 tags: [Web App]
 theme: light

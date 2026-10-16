@@ -11,7 +11,7 @@ export function ProjectDetails({ project }: { project: Project }) {
       </Reveal>
       {project.features.length > 0 && (
         <Reveal delay={0.08}>
-          <aside aria-labelledby="key-features" className="rounded-3xl border border-line p-7 lg:sticky lg:top-8">
+          <aside aria-labelledby="key-features" className="rounded-3xl border border-line p-7 lg:sticky lg:top-28">
             <h2 id="key-features" className="text-lg font-bold tracking-tight">
               Key Features
             </h2>
